@@ -75,11 +75,11 @@ elif menu == "Visualización de datos":
     )
 
     if viz_menu == "Situación Global":
-        # Queda pendiente. Tener cuidado con la identacion
+        st.write("Queda pendiente. Tener cuidado con la identacion")
 
 
     elif viz_menu == "Análisis geográfico":
-        # Queda pendiente. Tener cuidado con la identacion
+        st.write("Queda pendiente. Tener cuidado con la identacion")
 
     elif viz_menu == "Proyecciones":
             st.markdown("""
