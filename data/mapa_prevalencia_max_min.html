@@ -1,0 +1,2743 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_dc5050a5f274464ab129385e12fc7b69 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_dc5050a5f274464ab129385e12fc7b69" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_dc5050a5f274464ab129385e12fc7b69 = L.map(
+                "map_dc5050a5f274464ab129385e12fc7b69",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_393378e1e58b91688b7baae7559a96bb = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_393378e1e58b91688b7baae7559a96bb.addTo(map_dc5050a5f274464ab129385e12fc7b69);
+        
+    
+            var marker_cluster_88facd2e344729a535d5d0c362ecd171 = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var circle_marker_35a05212487fe09532206cccae7f1ab4 = L.circleMarker(
+                [33.7680065, 66.2385139],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_35a05212487fe09532206cccae7f1ab4.bindTooltip(
+                `<div>
+                     País: Afghanistan<br>Máximo valor: 51.5 (Año: 2000)<br>Mínimo valor: 43.5 (Año: 2013)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bc69f8f6ceb2289855d5bdc180e6e458 = L.circleMarker(
+                [41.3275, 19.8189],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_bc69f8f6ceb2289855d5bdc180e6e458.bindTooltip(
+                `<div>
+                     País: Albania<br>Máximo valor: 34.9 (Año: 2000)<br>Mínimo valor: 22.9 (Año: 2011)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e06754da09aed82b9d444b8e9d922ddf = L.circleMarker(
+                [28.0000272, 2.9999825],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_e06754da09aed82b9d444b8e9d922ddf.bindTooltip(
+                `<div>
+                     País: Algeria<br>Máximo valor: 39.9 (Año: 2000)<br>Mínimo valor: 33.9 (Año: 2015)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4b221cd4b9a4adb73a141c95433007d5 = L.circleMarker(
+                [42.5407167, 1.5732033],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_4b221cd4b9a4adb73a141c95433007d5.bindTooltip(
+                `<div>
+                     País: Andorra<br>Máximo valor: 14.1 (Año: 2019)<br>Mínimo valor: 12.4 (Año: 2010)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ca8546e6710886334960c8d1db820684 = L.circleMarker(
+                [-11.8775768, 17.5691241],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_ca8546e6710886334960c8d1db820684.bindTooltip(
+                `<div>
+                     País: Angola<br>Máximo valor: 72.8 (Año: 2000)<br>Mínimo valor: 60.5 (Año: 2012)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_395a8a0e10548a3396a4eaf4c3b73e76 = L.circleMarker(
+                [17.2234721, -61.9554608],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_395a8a0e10548a3396a4eaf4c3b73e76.bindTooltip(
+                `<div>
+                     País: Antigua and Barbuda<br>Máximo valor: 27.4 (Año: 2000)<br>Mínimo valor: 17.2 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_aa13f542c3a13b58a24b66bb7481fce0 = L.circleMarker(
+                [-34.9964963, -64.9672817],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_aa13f542c3a13b58a24b66bb7481fce0.bindTooltip(
+                `<div>
+                     País: Argentina<br>Máximo valor: 21.7 (Año: 2000)<br>Mínimo valor: 18.3 (Año: 2016)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9c582d4ccac3d45823536e36388af372 = L.circleMarker(
+                [40.0691, 45.0382],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_9c582d4ccac3d45823536e36388af372.bindTooltip(
+                `<div>
+                     País: Armenia<br>Máximo valor: 28.9 (Año: 2000)<br>Mínimo valor: 19.1 (Año: 2017)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9d9f61ed04a680520e431935b9f45b20 = L.circleMarker(
+                [-24.7761086, 134.755],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_9d9f61ed04a680520e431935b9f45b20.bindTooltip(
+                `<div>
+                     País: Australia<br>Máximo valor: 13.3 (Año: 2019)<br>Mínimo valor: 11.5 (Año: 2013)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0b3c82fead6c85774900576e453f9607 = L.circleMarker(
+                [47.59397, 14.12456],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_0b3c82fead6c85774900576e453f9607.bindTooltip(
+                `<div>
+                     País: Austria<br>Máximo valor: 14.6 (Año: 2019)<br>Mínimo valor: 12.0 (Año: 2002)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ac5f7dc4b80d96aa88b1a9c6ddebe556 = L.circleMarker(
+                [40.3936294, 47.7872508],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_ac5f7dc4b80d96aa88b1a9c6ddebe556.bindTooltip(
+                `<div>
+                     País: Azerbaijan<br>Máximo valor: 43.4 (Año: 2000)<br>Mínimo valor: 24.8 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bb92d4fa6e7b02873ccb2bbaa24f889e = L.circleMarker(
+                [25.0343, -77.3963],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_bb92d4fa6e7b02873ccb2bbaa24f889e.bindTooltip(
+                `<div>
+                     País: Bahamas, The<br>Máximo valor: 19.9 (Año: 2006)<br>Mínimo valor: 17.5 (Año: 2017)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_83ff026d84abf9da1e9a9113b7fa9289 = L.circleMarker(
+                [26.030093, 50.55333678912324],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_83ff026d84abf9da1e9a9113b7fa9289.bindTooltip(
+                `<div>
+                     País: Bahrain<br>Máximo valor: 26.2 (Año: 2000)<br>Mínimo valor: 22.3 (Año: 2013)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5fec9a471b5e801f79db4a614b031a06 = L.circleMarker(
+                [24.4769288, 90.2934413],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_5fec9a471b5e801f79db4a614b031a06.bindTooltip(
+                `<div>
+                     País: Bangladesh<br>Máximo valor: 56.6 (Año: 2000)<br>Mínimo valor: 43.1 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_eb7d46cc232b2e4e731abf626851e8aa = L.circleMarker(
+                [13.1500331, -59.5250305],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_eb7d46cc232b2e4e731abf626851e8aa.bindTooltip(
+                `<div>
+                     País: Barbados<br>Máximo valor: 22.5 (Año: 2006)<br>Mínimo valor: 20.0 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ed8e75f22ccba29a3ba381fea2b7023e = L.circleMarker(
+                [53.4250605, 27.6971358],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_ed8e75f22ccba29a3ba381fea2b7023e.bindTooltip(
+                `<div>
+                     País: Belarus<br>Máximo valor: 24.8 (Año: 2000)<br>Mínimo valor: 16.8 (Año: 2014)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c2a896d7fcb831c4d849acd1daae9cbd = L.circleMarker(
+                [50.6402809, 4.6667145],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_c2a896d7fcb831c4d849acd1daae9cbd.bindTooltip(
+                `<div>
+                     País: Belgium<br>Máximo valor: 17.4 (Año: 2019)<br>Mínimo valor: 13.6 (Año: 2004)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ac4c88b6232acca3ad1325de0a2801e8 = L.circleMarker(
+                [17.1204943, -88.6859028],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_ac4c88b6232acca3ad1325de0a2801e8.bindTooltip(
+                `<div>
+                     País: Belize<br>Máximo valor: 26.1 (Año: 2000)<br>Mínimo valor: 20.2 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2e084eab5db1e3d42a72a38a5d47a810 = L.circleMarker(
+                [9.5293472, 2.2584408],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_2e084eab5db1e3d42a72a38a5d47a810.bindTooltip(
+                `<div>
+                     País: Benin<br>Máximo valor: 80.3 (Año: 2000)<br>Mínimo valor: 71.0 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_eaf1bef1e554d696f81543c06574112b = L.circleMarker(
+                [27.549511, 90.5119273],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_eaf1bef1e554d696f81543c06574112b.bindTooltip(
+                `<div>
+                     País: Bhutan<br>Máximo valor: 67.5 (Año: 2000)<br>Mínimo valor: 44.7 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e451c962f37fd38027bf83f08c8f7ea6 = L.circleMarker(
+                [-17.0568696, -64.9912286],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_e451c962f37fd38027bf83f08c8f7ea6.bindTooltip(
+                `<div>
+                     País: Bolivia<br>Máximo valor: 57.0 (Año: 2000)<br>Mínimo valor: 36.9 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_aedcc04d68c2f405c1f2cdc3cef94244 = L.circleMarker(
+                [44.3053476, 17.5961467],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_aedcc04d68c2f405c1f2cdc3cef94244.bindTooltip(
+                `<div>
+                     País: Bosnia and Herzegovina<br>Máximo valor: 25.3 (Año: 2000)<br>Mínimo valor: 23.1 (Año: 2014)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3610c0298a357e7e0dbe9b668ba65bc1 = L.circleMarker(
+                [-23.1681782, 24.5928742],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_3610c0298a357e7e0dbe9b668ba65bc1.bindTooltip(
+                `<div>
+                     País: Botswana<br>Máximo valor: 44.2 (Año: 2000)<br>Mínimo valor: 37.5 (Año: 2010)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ee8fed38b84802a00aec7ed5f55ca03b = L.circleMarker(
+                [-10.3333333, -53.2],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_ee8fed38b84802a00aec7ed5f55ca03b.bindTooltip(
+                `<div>
+                     País: Brazil<br>Máximo valor: 25.9 (Año: 2000)<br>Mínimo valor: 11.6 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6624b9da48aa395697dff0d4d3cd10c9 = L.circleMarker(
+                [4.4137155, 114.5653908],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_6624b9da48aa395697dff0d4d3cd10c9.bindTooltip(
+                `<div>
+                     País: Brunei Darussalam<br>Máximo valor: 20.0 (Año: 2019)<br>Mínimo valor: 16.6 (Año: 2004)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cf76038e175b49219e9bcc047b3c7f0d = L.circleMarker(
+                [42.6073975, 25.4856617],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_cf76038e175b49219e9bcc047b3c7f0d.bindTooltip(
+                `<div>
+                     País: Bulgaria<br>Máximo valor: 28.8 (Año: 2000)<br>Mínimo valor: 23.6 (Año: 2016)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3fb6aa7ef33c5d8af009fa3877c9d87b = L.circleMarker(
+                [12.0753083, -1.6880314],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_3fb6aa7ef33c5d8af009fa3877c9d87b.bindTooltip(
+                `<div>
+                     País: Burkina Faso<br>Máximo valor: 88.4 (Año: 2003)<br>Mínimo valor: 76.6 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_394657e5d19f9e1b8501106a098d26e0 = L.circleMarker(
+                [-3.426449, 29.9324519],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_394657e5d19f9e1b8501106a098d26e0.bindTooltip(
+                `<div>
+                     País: Burundi<br>Máximo valor: 67.7 (Año: 2000)<br>Mínimo valor: 52.0 (Año: 2012)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e0f5536c8d8835ff363843dc211938ca = L.circleMarker(
+                [16.0000552, -24.0083947],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_e0f5536c8d8835ff363843dc211938ca.bindTooltip(
+                `<div>
+                     País: Cabo Verde<br>Máximo valor: 58.4 (Año: 2000)<br>Mínimo valor: 44.1 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7105709904e065eac76c3f6b5a4bf0cf = L.circleMarker(
+                [12.5433216, 104.8144914],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_7105709904e065eac76c3f6b5a4bf0cf.bindTooltip(
+                `<div>
+                     País: Cambodia<br>Máximo valor: 65.9 (Año: 2000)<br>Mínimo valor: 49.0 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_90e876809a704b660c3a470e66d52410 = L.circleMarker(
+                [4.6125522, 13.1535811],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_90e876809a704b660c3a470e66d52410.bindTooltip(
+                `<div>
+                     País: Cameroon<br>Máximo valor: 70.7 (Año: 2000)<br>Mínimo valor: 59.2 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_875350f5f391fb2e4267700d62dd7f56 = L.circleMarker(
+                [61.0666922, -107.991707],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_875350f5f391fb2e4267700d62dd7f56.bindTooltip(
+                `<div>
+                     País: Canada<br>Máximo valor: 13.2 (Año: 2019)<br>Mínimo valor: 10.3 (Año: 2008)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_296ede75ecabde4584dd1f142a4a5c98 = L.circleMarker(
+                [7.0323598, 19.9981227],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_296ede75ecabde4584dd1f142a4a5c98.bindTooltip(
+                `<div>
+                     País: Central African Republic<br>Máximo valor: 82.0 (Año: 2000)<br>Mínimo valor: 73.6 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4192c70fa38edf473a89ac4a2866c4af = L.circleMarker(
+                [15.6134137, 19.0156172],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_4192c70fa38edf473a89ac4a2866c4af.bindTooltip(
+                `<div>
+                     País: Chad<br>Máximo valor: 79.1 (Año: 2000)<br>Mínimo valor: 66.3 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9cba7d476c06e5eeedf5473ea6c54b39 = L.circleMarker(
+                [-31.7613365, -71.3187697],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_9cba7d476c06e5eeedf5473ea6c54b39.bindTooltip(
+                `<div>
+                     País: Chile<br>Máximo valor: 20.9 (Año: 2000)<br>Mínimo valor: 19.3 (Año: 2015)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fac5b12625dbd08c24b6e708928773f5 = L.circleMarker(
+                [35.0000663, 104.999955],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_fac5b12625dbd08c24b6e708928773f5.bindTooltip(
+                `<div>
+                     País: China<br>Máximo valor: 28.5 (Año: 2000)<br>Mínimo valor: 18.1 (Año: 2014)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3b76c695714c58a6bf7dd0427fcf2c66 = L.circleMarker(
+                [4.099917, -72.9088133],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_3b76c695714c58a6bf7dd0427fcf2c66.bindTooltip(
+                `<div>
+                     País: Colombia<br>Máximo valor: 30.2 (Año: 2000)<br>Mínimo valor: 22.2 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bece657d9f8a5f4141aba6f3ecb72567 = L.circleMarker(
+                [-12.2045176, 44.2832964],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_bece657d9f8a5f4141aba6f3ecb72567.bindTooltip(
+                `<div>
+                     País: Comoros<br>Máximo valor: 61.3 (Año: 2000)<br>Mínimo valor: 53.8 (Año: 2015)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_24c88452cec9ec142d80eb59e59a59d2 = L.circleMarker(
+                [-4.038333, 21.758664],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_24c88452cec9ec142d80eb59e59a59d2.bindTooltip(
+                `<div>
+                     País: Congo, Dem. Rep.<br>Máximo valor: 76.6 (Año: 2000)<br>Mínimo valor: 64.9 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6f6af596ea7706de723367752989c4fb = L.circleMarker(
+                [-0.228021, 15.827659],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_6f6af596ea7706de723367752989c4fb.bindTooltip(
+                `<div>
+                     País: Congo, Rep.<br>Máximo valor: 72.5 (Año: 2000)<br>Mínimo valor: 60.8 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fee366cce840b0409683114ea720bc6f = L.circleMarker(
+                [10.2735633, -84.0739102],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_fee366cce840b0409683114ea720bc6f.bindTooltip(
+                `<div>
+                     País: Costa Rica<br>Máximo valor: 20.1 (Año: 2000)<br>Mínimo valor: 18.6 (Año: 2016)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d82b282dcb203c4d3374f5d71251945a = L.circleMarker(
+                [7.9897371, -5.5679458],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_d82b282dcb203c4d3374f5d71251945a.bindTooltip(
+                `<div>
+                     País: Cote d'Ivoire<br>Máximo valor: 80.0 (Año: 2000)<br>Mínimo valor: 72.2 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_abfac667199f8daf3e20fa1b2a4d9b40 = L.circleMarker(
+                [45.3658443, 15.6575209],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_abfac667199f8daf3e20fa1b2a4d9b40.bindTooltip(
+                `<div>
+                     País: Croatia<br>Máximo valor: 20.5 (Año: 2000)<br>Mínimo valor: 18.7 (Año: 2013)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_23b2e4cbba66238f3f4179505f51a937 = L.circleMarker(
+                [23.0131338, -80.8328748],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_23b2e4cbba66238f3f4179505f51a937.bindTooltip(
+                `<div>
+                     País: Cuba<br>Máximo valor: 26.4 (Año: 2003)<br>Mínimo valor: 18.1 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e813f15cd99ae7722d1c0ee0511dbb14 = L.circleMarker(
+                [34.9174159, 32.889902651331866],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_e813f15cd99ae7722d1c0ee0511dbb14.bindTooltip(
+                `<div>
+                     País: Cyprus<br>Máximo valor: 14.5 (Año: 2019)<br>Mínimo valor: 12.8 (Año: 2010)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_183608cf47a2115bd5237eb94c20578a = L.circleMarker(
+                [49.7439047, 15.3381061],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_183608cf47a2115bd5237eb94c20578a.bindTooltip(
+                `<div>
+                     País: Czechia<br>Máximo valor: 18.7 (Año: 2019)<br>Mínimo valor: 16.0 (Año: 2009)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bde0d37e0306d54ef3179ad347183dd6 = L.circleMarker(
+                [55.670249, 10.3333283],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_bde0d37e0306d54ef3179ad347183dd6.bindTooltip(
+                `<div>
+                     País: Denmark<br>Máximo valor: 14.5 (Año: 2019)<br>Mínimo valor: 12.5 (Año: 2009)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a4c2679234d713e4d741b55555cee5ae = L.circleMarker(
+                [11.8145966, 42.8453061],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_a4c2679234d713e4d741b55555cee5ae.bindTooltip(
+                `<div>
+                     País: Djibouti<br>Máximo valor: 61.5 (Año: 2000)<br>Mínimo valor: 51.9 (Año: 2015)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d7837bb5a547df69f4e013c21b9613d6 = L.circleMarker(
+                [15.4113138, -61.3653618],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_d7837bb5a547df69f4e013c21b9613d6.bindTooltip(
+                `<div>
+                     País: Dominica<br>Máximo valor: 29.8 (Año: 2019)<br>Mínimo valor: 26.3 (Año: 2003)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_386258a309aa4294cc2ca6320e7be16a = L.circleMarker(
+                [19.0974031, -70.3028026],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_386258a309aa4294cc2ca6320e7be16a.bindTooltip(
+                `<div>
+                     País: Dominican Republic<br>Máximo valor: 34.6 (Año: 2000)<br>Mínimo valor: 27.8 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9bcda04e79bc572716adae145b9a713d = L.circleMarker(
+                [-1.3397668, -79.3666965],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_9bcda04e79bc572716adae145b9a713d.bindTooltip(
+                `<div>
+                     País: Ecuador<br>Máximo valor: 31.9 (Año: 2000)<br>Mínimo valor: 23.5 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f0fc0567f038e25fc0cf2aa3ce888d87 = L.circleMarker(
+                [26.820553, 30.802498],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_f0fc0567f038e25fc0cf2aa3ce888d87.bindTooltip(
+                `<div>
+                     País: Egypt, Arab Rep.<br>Máximo valor: 40.2 (Año: 2005)<br>Mínimo valor: 32.2 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f9cdf274bf049ebc26d535065336dff6 = L.circleMarker(
+                [13.8000382, -88.9140683],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_f9cdf274bf049ebc26d535065336dff6.bindTooltip(
+                `<div>
+                     País: El Salvador<br>Máximo valor: 24.9 (Año: 2014)<br>Mínimo valor: 21.9 (Año: 2000)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cf4dc03bf74fc6416fa0dcf25d2e4fd6 = L.circleMarker(
+                [1.613172, 10.5170357],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_cf4dc03bf74fc6416fa0dcf25d2e4fd6.bindTooltip(
+                `<div>
+                     País: Equatorial Guinea<br>Máximo valor: 77.7 (Año: 2000)<br>Mínimo valor: 64.3 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6435a059fc7fd59a6574a50736456e09 = L.circleMarker(
+                [15.9500319, 37.9999668],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_6435a059fc7fd59a6574a50736456e09.bindTooltip(
+                `<div>
+                     País: Eritrea<br>Máximo valor: 59.5 (Año: 2000)<br>Mínimo valor: 48.6 (Año: 2015)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_df95b2bd106435a1a48408686177f9ec = L.circleMarker(
+                [58.7523778, 25.3319078],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_df95b2bd106435a1a48408686177f9ec.bindTooltip(
+                `<div>
+                     País: Estonia<br>Máximo valor: 23.1 (Año: 2000)<br>Mínimo valor: 17.7 (Año: 2017)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4cfa86f0beab59d8bf2d37eb17d2f803 = L.circleMarker(
+                [-26.5624806, 31.3991317],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_4cfa86f0beab59d8bf2d37eb17d2f803.bindTooltip(
+                `<div>
+                     País: Eswatini<br>Máximo valor: 46.2 (Año: 2005)<br>Mínimo valor: 41.9 (Año: 2015)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_de20b46c627b71694e8ffeb1bb3e9c4d = L.circleMarker(
+                [10.2116702, 38.6521203],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_de20b46c627b71694e8ffeb1bb3e9c4d.bindTooltip(
+                `<div>
+                     País: Ethiopia<br>Máximo valor: 68.5 (Año: 2000)<br>Mínimo valor: 50.3 (Año: 2014)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_45952c553565faef20abca640db69f15 = L.circleMarker(
+                [-18.1239696, 179.0122737],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_45952c553565faef20abca640db69f15.bindTooltip(
+                `<div>
+                     País: Fiji<br>Máximo valor: 40.5 (Año: 2009)<br>Mínimo valor: 36.3 (Año: 2000)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_81deb2936399c7325a9851fbee76e2ab = L.circleMarker(
+                [63.2467777, 25.9209164],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_81deb2936399c7325a9851fbee76e2ab.bindTooltip(
+                `<div>
+                     País: Finland<br>Máximo valor: 11.8 (Año: 2019)<br>Mínimo valor: 10.0 (Año: 2011)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_930960d91b4be30d2500b55be8926d9e = L.circleMarker(
+                [46.603354, 1.8883335],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_930960d91b4be30d2500b55be8926d9e.bindTooltip(
+                `<div>
+                     País: France<br>Máximo valor: 14.7 (Año: 2019)<br>Mínimo valor: 10.7 (Año: 2003)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b2efc7af4697d78f44d26358917206ef = L.circleMarker(
+                [-0.8999695, 11.6899699],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_b2efc7af4697d78f44d26358917206ef.bindTooltip(
+                `<div>
+                     País: Gabon<br>Máximo valor: 68.3 (Año: 2000)<br>Mínimo valor: 57.9 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9755742e4dbb08f06887dfc522ea1bdb = L.circleMarker(
+                [13.443182, -15.310196],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_9755742e4dbb08f06887dfc522ea1bdb.bindTooltip(
+                `<div>
+                     País: Gambia, The<br>Máximo valor: 75.0 (Año: 2001)<br>Mínimo valor: 52.3 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e525219258203a5ae61231405d3a6704 = L.circleMarker(
+                [42.315, 43.356],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_e525219258203a5ae61231405d3a6704.bindTooltip(
+                `<div>
+                     País: Georgia<br>Máximo valor: 36.9 (Año: 2000)<br>Mínimo valor: 23.6 (Año: 2015)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f33af3e655cbfd29cefc7ea926d3ff01 = L.circleMarker(
+                [51.1638175, 10.4478313],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_f33af3e655cbfd29cefc7ea926d3ff01.bindTooltip(
+                `<div>
+                     País: Germany<br>Máximo valor: 15.1 (Año: 2019)<br>Mínimo valor: 11.6 (Año: 2002)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_534c527c6aecd21b66a5ff5396b0ea94 = L.circleMarker(
+                [8.0300284, -1.0800271],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_534c527c6aecd21b66a5ff5396b0ea94.bindTooltip(
+                `<div>
+                     País: Ghana<br>Máximo valor: 76.4 (Año: 2000)<br>Mínimo valor: 59.5 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_04dd4ce2e7c1f2d53056d82e9f7f09a9 = L.circleMarker(
+                [38.9953683, 21.9877132],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_04dd4ce2e7c1f2d53056d82e9f7f09a9.bindTooltip(
+                `<div>
+                     País: Greece<br>Máximo valor: 16.7 (Año: 2019)<br>Mínimo valor: 13.3 (Año: 2008)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c603e3310ac9d011b749e3a252977ef9 = L.circleMarker(
+                [12.1360374, -61.6904045],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_c603e3310ac9d011b749e3a252977ef9.bindTooltip(
+                `<div>
+                     País: Grenada<br>Máximo valor: 24.5 (Año: 2000)<br>Mínimo valor: 23.6 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e0e2745202be1f7dac1fa659cae7fcd5 = L.circleMarker(
+                [15.5855545, -90.345759],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_e0e2745202be1f7dac1fa659cae7fcd5.bindTooltip(
+                `<div>
+                     País: Guatemala<br>Máximo valor: 33.0 (Año: 2003)<br>Mínimo valor: 9.8 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e8a491f00c514bda2a0abe83324e56bc = L.circleMarker(
+                [10.7226226, -10.7083587],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_e8a491f00c514bda2a0abe83324e56bc.bindTooltip(
+                `<div>
+                     País: Guinea<br>Máximo valor: 80.9 (Año: 2000)<br>Mínimo valor: 73.8 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b19bf9be6d1dc974cd11a029e7de0f5c = L.circleMarker(
+                [11.815215, -15.2351044],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_b19bf9be6d1dc974cd11a029e7de0f5c.bindTooltip(
+                `<div>
+                     País: Guinea-Bissau<br>Máximo valor: 79.7 (Año: 2000)<br>Mínimo valor: 68.0 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e2c1453bba937e4567dd5724154ff17c = L.circleMarker(
+                [4.8417097, -58.6416891],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_e2c1453bba937e4567dd5724154ff17c.bindTooltip(
+                `<div>
+                     País: Guyana<br>Máximo valor: 39.7 (Año: 2000)<br>Mínimo valor: 29.3 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7f404a5a4d246119e34302a3c270970e = L.circleMarker(
+                [19.1399952, -72.3570972],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_7f404a5a4d246119e34302a3c270970e.bindTooltip(
+                `<div>
+                     País: Haiti<br>Máximo valor: 64.4 (Año: 2000)<br>Mínimo valor: 60.1 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_75b5ce309770a8e1953d435aacd8e196 = L.circleMarker(
+                [15.2572432, -86.0755145],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_75b5ce309770a8e1953d435aacd8e196.bindTooltip(
+                `<div>
+                     País: Honduras<br>Máximo valor: 35.9 (Año: 2004)<br>Mínimo valor: 26.2 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a1c0cc7542c9c8b3e48fc428b76c8717 = L.circleMarker(
+                [47.1817585, 19.5060937],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_a1c0cc7542c9c8b3e48fc428b76c8717.bindTooltip(
+                `<div>
+                     País: Hungary<br>Máximo valor: 20.6 (Año: 2000)<br>Mínimo valor: 17.9 (Año: 2018)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6a79d860df6a219090ce3a8a1c8c02d7 = L.circleMarker(
+                [64.9841821, -18.1059013],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_6a79d860df6a219090ce3a8a1c8c02d7.bindTooltip(
+                `<div>
+                     País: Iceland<br>Máximo valor: 11.0 (Año: 2019)<br>Mínimo valor: 9.4 (Año: 2010)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bfc75bf4998f9e0a94c8b243f94c9318 = L.circleMarker(
+                [22.3511148, 78.6677428],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_bfc75bf4998f9e0a94c8b243f94c9318.bindTooltip(
+                `<div>
+                     País: India<br>Máximo valor: 69.5 (Año: 2000)<br>Mínimo valor: 53.4 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_12ab460afc434caed9ba2529de5b8143 = L.circleMarker(
+                [-2.4833826, 117.8902853],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_12ab460afc434caed9ba2529de5b8143.bindTooltip(
+                `<div>
+                     País: Indonesia<br>Máximo valor: 43.9 (Año: 2000)<br>Mínimo valor: 36.9 (Año: 2012)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_32383051b72636ea2ac6822779508144 = L.circleMarker(
+                [53.0, 32.0],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_32383051b72636ea2ac6822779508144.bindTooltip(
+                `<div>
+                     País: Iran, Islamic Rep.<br>Máximo valor: 40.9 (Año: 2000)<br>Mínimo valor: 26.4 (Año: 2018)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_119ef78a52fdc3620526fdfe20709ede = L.circleMarker(
+                [33.0955793, 44.1749775],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_119ef78a52fdc3620526fdfe20709ede.bindTooltip(
+                `<div>
+                     País: Iraq<br>Máximo valor: 36.9 (Año: 2000)<br>Mínimo valor: 28.0 (Año: 2014)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_688467edf0a132e34f4d994a4ade6e78 = L.circleMarker(
+                [52.865196, -7.9794599],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_688467edf0a132e34f4d994a4ade6e78.bindTooltip(
+                `<div>
+                     País: Ireland<br>Máximo valor: 14.1 (Año: 2019)<br>Mínimo valor: 11.9 (Año: 2006)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4c5544129332772fc354278a374826d1 = L.circleMarker(
+                [30.8124247, 34.8594762],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_4c5544129332772fc354278a374826d1.bindTooltip(
+                `<div>
+                     País: Israel<br>Máximo valor: 14.3 (Año: 2019)<br>Mínimo valor: 12.4 (Año: 2009)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ac5e3c69c6bad033b8aaf55418454089 = L.circleMarker(
+                [42.6384261, 12.674297],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_ac5e3c69c6bad033b8aaf55418454089.bindTooltip(
+                `<div>
+                     País: Italy<br>Máximo valor: 14.9 (Año: 2019)<br>Mínimo valor: 12.0 (Año: 2005)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fa80158fc91cc9074ce0e4f7bcb049fb = L.circleMarker(
+                [18.1850507, -77.3947693],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_fa80158fc91cc9074ce0e4f7bcb049fb.bindTooltip(
+                `<div>
+                     País: Jamaica<br>Máximo valor: 27.7 (Año: 2000)<br>Mínimo valor: 23.6 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0c8de0ee3b9fb2d7df3ba3e8c449d205 = L.circleMarker(
+                [36.5748441, 139.2394179],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_0c8de0ee3b9fb2d7df3ba3e8c449d205.bindTooltip(
+                `<div>
+                     País: Japan<br>Máximo valor: 16.7 (Año: 2019)<br>Mínimo valor: 14.9 (Año: 2004)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_49542158be335cdddc65ebde4d88299e = L.circleMarker(
+                [31.9686, 35.9346],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_49542158be335cdddc65ebde4d88299e.bindTooltip(
+                `<div>
+                     País: Jordan<br>Máximo valor: 32.7 (Año: 2019)<br>Mínimo valor: 30.4 (Año: 2010)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_85670c1bbcdd8d049db370dd7c4f526f = L.circleMarker(
+                [48.1012954, 66.7780818],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_85670c1bbcdd8d049db370dd7c4f526f.bindTooltip(
+                `<div>
+                     País: Kazakhstan<br>Máximo valor: 41.9 (Año: 2000)<br>Mínimo valor: 21.6 (Año: 2016)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f9ece97d6a3847f8d0682a9a8666ff86 = L.circleMarker(
+                [1.4419683, 38.4313975],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_f9ece97d6a3847f8d0682a9a8666ff86.bindTooltip(
+                `<div>
+                     País: Kenya<br>Máximo valor: 56.7 (Año: 2000)<br>Mínimo valor: 39.3 (Año: 2013)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d6a8a830e8af96a3e27ffe6446f64d19 = L.circleMarker(
+                [0.3448612, 173.6641773],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_d6a8a830e8af96a3e27ffe6446f64d19.bindTooltip(
+                `<div>
+                     País: Kiribati<br>Máximo valor: 53.2 (Año: 2009)<br>Mínimo valor: 49.4 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_89fbc3b9a2822f3893e02b62e4361c58 = L.circleMarker(
+                [40.339852, 127.510093],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_89fbc3b9a2822f3893e02b62e4361c58.bindTooltip(
+                `<div>
+                     País: Korea, Dem. People's Rep.<br>Máximo valor: 42.9 (Año: 2000)<br>Mínimo valor: 30.9 (Año: 2015)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_48b928b3f8ee30d7ec76cc9f44787968 = L.circleMarker(
+                [36.5761, 127.285],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_48b928b3f8ee30d7ec76cc9f44787968.bindTooltip(
+                `<div>
+                     País: Korea, Rep.<br>Máximo valor: 15.0 (Año: 2019)<br>Mínimo valor: 13.8 (Año: 2012)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_73ac15b4b1311075d94cb760454f7e70 = L.circleMarker(
+                [29.3796532, 47.9734174],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_73ac15b4b1311075d94cb760454f7e70.bindTooltip(
+                `<div>
+                     País: Kuwait<br>Máximo valor: 20.0 (Año: 2000)<br>Mínimo valor: 17.3 (Año: 2008)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_28c4296f5756fc2a755c615f1144104a = L.circleMarker(
+                [41.5089324, 74.724091],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_28c4296f5756fc2a755c615f1144104a.bindTooltip(
+                `<div>
+                     País: Kyrgyz Republic<br>Máximo valor: 42.8 (Año: 2000)<br>Mínimo valor: 33.3 (Año: 2018)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_91b6006f68fdbb7406ed25040133b93e = L.circleMarker(
+                [17.9582181, 102.6165242],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_91b6006f68fdbb7406ed25040133b93e.bindTooltip(
+                `<div>
+                     País: Lao PDR<br>Máximo valor: 50.2 (Año: 2000)<br>Mínimo valor: 41.3 (Año: 2018)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_da1af35797800c5316757348b62766c0 = L.circleMarker(
+                [56.8406494, 24.7537645],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_da1af35797800c5316757348b62766c0.bindTooltip(
+                `<div>
+                     País: Latvia<br>Máximo valor: 27.4 (Año: 2000)<br>Mínimo valor: 19.2 (Año: 2018)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ecc6728f4f7ab01e67e1b9c36a3d1fd9 = L.circleMarker(
+                [33.8547, 35.8623],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_ecc6728f4f7ab01e67e1b9c36a3d1fd9.bindTooltip(
+                `<div>
+                     País: Lebanon<br>Máximo valor: 26.1 (Año: 2000)<br>Mínimo valor: 21.2 (Año: 2011)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3346babb814a856b78179a2cac430aa5 = L.circleMarker(
+                [-29.6039267, 28.3350193],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_3346babb814a856b78179a2cac430aa5.bindTooltip(
+                `<div>
+                     País: Lesotho<br>Máximo valor: 51.4 (Año: 2019)<br>Mínimo valor: 48.5 (Año: 2000)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6f45f9bbfe9c001f15e753184335f544 = L.circleMarker(
+                [5.7499721, -9.3658524],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_6f45f9bbfe9c001f15e753184335f544.bindTooltip(
+                `<div>
+                     País: Liberia<br>Máximo valor: 81.0 (Año: 2000)<br>Mínimo valor: 71.3 (Año: 2010)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_75d9983eb1465fd993846b7c504bdc29 = L.circleMarker(
+                [26.8234472, 18.1236723],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_75d9983eb1465fd993846b7c504bdc29.bindTooltip(
+                `<div>
+                     País: Libya<br>Máximo valor: 33.2 (Año: 2000)<br>Mínimo valor: 26.2 (Año: 2016)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_15e371f331a6c6361f9a3dc15d65445a = L.circleMarker(
+                [55.3500003, 23.7499997],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_15e371f331a6c6361f9a3dc15d65445a.bindTooltip(
+                `<div>
+                     País: Lithuania<br>Máximo valor: 23.8 (Año: 2000)<br>Mínimo valor: 17.0 (Año: 2012)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7f5bb8b899f7bc146ea0641652cae4b1 = L.circleMarker(
+                [49.6112768, 6.129799],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_7f5bb8b899f7bc146ea0641652cae4b1.bindTooltip(
+                `<div>
+                     País: Luxembourg<br>Máximo valor: 11.7 (Año: 2019)<br>Mínimo valor: 9.3 (Año: 2007)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4bbda7816e743b3b29fc4ce9af1feb74 = L.circleMarker(
+                [-18.9249604, 46.4416422],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_4bbda7816e743b3b29fc4ce9af1feb74.bindTooltip(
+                `<div>
+                     País: Madagascar<br>Máximo valor: 64.4 (Año: 2000)<br>Mínimo valor: 49.5 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5180310ae933e6a3f4541462d9a1076b = L.circleMarker(
+                [-13.2687204, 33.9301963],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_5180310ae933e6a3f4541462d9a1076b.bindTooltip(
+                `<div>
+                     País: Malawi<br>Máximo valor: 76.4 (Año: 2000)<br>Mínimo valor: 55.1 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_34108850ce7ee916cc6557fa5c21efd8 = L.circleMarker(
+                [4.5693754, 102.2656823],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_34108850ce7ee916cc6557fa5c21efd8.bindTooltip(
+                `<div>
+                     País: Malaysia<br>Máximo valor: 24.6 (Año: 2019)<br>Mínimo valor: 19.4 (Año: 2004)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5e04d2968357d9256149d1ea84914884 = L.circleMarker(
+                [3.7203503, 73.2244152],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_5e04d2968357d9256149d1ea84914884.bindTooltip(
+                `<div>
+                     País: Maldives<br>Máximo valor: 44.9 (Año: 2000)<br>Mínimo valor: 33.4 (Año: 2010)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bbc04fb111997112899906608ccfeecd = L.circleMarker(
+                [16.3700359, -2.2900239],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_bbc04fb111997112899906608ccfeecd.bindTooltip(
+                `<div>
+                     País: Mali<br>Máximo valor: 85.0 (Año: 2000)<br>Mínimo valor: 79.0 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_84f5c1a891f42b7a78974be8c458b852 = L.circleMarker(
+                [35.8885993, 14.4476911],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_84f5c1a891f42b7a78974be8c458b852.bindTooltip(
+                `<div>
+                     País: Malta<br>Máximo valor: 17.4 (Año: 2019)<br>Mínimo valor: 14.6 (Año: 2006)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bbce3ab45fdb9fbc911e69d5017c00d5 = L.circleMarker(
+                [8.230816999999998, 167.7953223704529],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_bbce3ab45fdb9fbc911e69d5017c00d5.bindTooltip(
+                `<div>
+                     País: Marshall Islands<br>Máximo valor: 43.1 (Año: 2008)<br>Mínimo valor: 39.5 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e957d834f0d156f472a3d41c0d18a4a1 = L.circleMarker(
+                [20.2540382, -9.2399263],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_e957d834f0d156f472a3d41c0d18a4a1.bindTooltip(
+                `<div>
+                     País: Mauritania<br>Máximo valor: 73.8 (Año: 2000)<br>Mínimo valor: 65.5 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_24be010a3e5399ffd4623d7ea114569a = L.circleMarker(
+                [-20.2759451, 57.5703566],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_24be010a3e5399ffd4623d7ea114569a.bindTooltip(
+                `<div>
+                     País: Mauritius<br>Máximo valor: 30.7 (Año: 2019)<br>Mínimo valor: 26.5 (Año: 2011)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b988fd4c5bfb29b0f157488e08cd6127 = L.circleMarker(
+                [19.4326296, -99.1331785],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_b988fd4c5bfb29b0f157488e08cd6127.bindTooltip(
+                `<div>
+                     País: Mexico<br>Máximo valor: 30.7 (Año: 2000)<br>Mínimo valor: 21.7 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_17794020f065bc0c714abbb43bf9e886 = L.circleMarker(
+                [6.91, 158.25],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_17794020f065bc0c714abbb43bf9e886.bindTooltip(
+                `<div>
+                     País: Micronesia, Fed. Sts.<br>Máximo valor: 38.3 (Año: 2008)<br>Mínimo valor: 35.9 (Año: 2000)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2e316bc42327a02b88e94402a612c5d6 = L.circleMarker(
+                [47.2879608, 28.5670941],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_2e316bc42327a02b88e94402a612c5d6.bindTooltip(
+                `<div>
+                     País: Moldova<br>Máximo valor: 38.6 (Año: 2000)<br>Mínimo valor: 26.3 (Año: 2016)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3e7947362658dde033d9f3e90452a4c2 = L.circleMarker(
+                [43.7323492, 7.4276832],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_3e7947362658dde033d9f3e90452a4c2.bindTooltip(
+                `<div>
+                     País: Monaco<br>Máximo valor: 14.3 (Año: 2019)<br>Mínimo valor: 11.7 (Año: 2004)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_632075634385c056440b6d08f0566406 = L.circleMarker(
+                [46.8250388, 103.8499736],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_632075634385c056440b6d08f0566406.bindTooltip(
+                `<div>
+                     País: Mongolia<br>Máximo valor: 32.6 (Año: 2000)<br>Mínimo valor: 20.7 (Año: 2016)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4da2a94f3eb56517d42d1b1d2d70aa78 = L.circleMarker(
+                [42.4411, 19.2636],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_4da2a94f3eb56517d42d1b1d2d70aa78.bindTooltip(
+                `<div>
+                     País: Montenegro<br>Máximo valor: 25.8 (Año: 2000)<br>Mínimo valor: 14.4 (Año: 2017)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5640bb86b22b3d88732676599a50929f = L.circleMarker(
+                [28.3347722, -10.371337908392649],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_5640bb86b22b3d88732676599a50929f.bindTooltip(
+                `<div>
+                     País: Morocco<br>Máximo valor: 36.0 (Año: 2000)<br>Mínimo valor: 30.1 (Año: 2017)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_db2cdb15ec15fba405734cd2c1291236 = L.circleMarker(
+                [-19.302233, 34.9144977],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_db2cdb15ec15fba405734cd2c1291236.bindTooltip(
+                `<div>
+                     País: Mozambique<br>Máximo valor: 76.7 (Año: 2000)<br>Mínimo valor: 64.6 (Año: 2012)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8afd600736f9a84a498bdc8e21149d96 = L.circleMarker(
+                [17.1750495, 95.9999652],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_8afd600736f9a84a498bdc8e21149d96.bindTooltip(
+                `<div>
+                     País: Myanmar<br>Máximo valor: 57.5 (Año: 2000)<br>Mínimo valor: 49.3 (Año: 2013)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_539bdde9137e99a6edd00a26e9d3b75f = L.circleMarker(
+                [-23.2335499, 17.3231107],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_539bdde9137e99a6edd00a26e9d3b75f.bindTooltip(
+                `<div>
+                     País: Namibia<br>Máximo valor: 48.7 (Año: 2004)<br>Mínimo valor: 45.6 (Año: 2010)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8936e95604cc6579439a728eab3d8984 = L.circleMarker(
+                [-0.5252306, 166.9324426],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_8936e95604cc6579439a728eab3d8984.bindTooltip(
+                `<div>
+                     País: Nauru<br>Máximo valor: 47.7 (Año: 2008)<br>Mínimo valor: 41.8 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1a14cab8a369e87aeda1a5644c57d67f = L.circleMarker(
+                [28.3780464, 83.9999901],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_1a14cab8a369e87aeda1a5644c57d67f.bindTooltip(
+                `<div>
+                     País: Nepal<br>Máximo valor: 61.7 (Año: 2000)<br>Mínimo valor: 44.5 (Año: 2018)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1bbf293011617c52d964fed54b9cac45 = L.circleMarker(
+                [52.2434979, 5.6343227],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_1bbf293011617c52d964fed54b9cac45.bindTooltip(
+                `<div>
+                     País: Netherlands<br>Máximo valor: 15.5 (Año: 2019)<br>Mínimo valor: 11.8 (Año: 2000)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5a243bdf49c32d51b2a30132e6187c28 = L.circleMarker(
+                [-41.5000831, 172.8344077],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_5a243bdf49c32d51b2a30132e6187c28.bindTooltip(
+                `<div>
+                     País: New Zealand<br>Máximo valor: 15.3 (Año: 2019)<br>Mínimo valor: 12.2 (Año: 2006)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1aee32f6783823d97e3ae910a139b6bf = L.circleMarker(
+                [12.6090157, -85.2936911],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_1aee32f6783823d97e3ae910a139b6bf.bindTooltip(
+                `<div>
+                     País: Nicaragua<br>Máximo valor: 28.8 (Año: 2000)<br>Mínimo valor: 17.4 (Año: 2011)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ad0c6a06c7cdb29c18f7cb5891276ef6 = L.circleMarker(
+                [17.7356214, 9.3238432],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_ad0c6a06c7cdb29c18f7cb5891276ef6.bindTooltip(
+                `<div>
+                     País: Niger<br>Máximo valor: 83.9 (Año: 2000)<br>Mínimo valor: 72.0 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_06a2e6ac4802b0f411aad727ba12b710 = L.circleMarker(
+                [9.6000359, 7.9999721],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_06a2e6ac4802b0f411aad727ba12b710.bindTooltip(
+                `<div>
+                     País: Nigeria<br>Máximo valor: 79.3 (Año: 2000)<br>Mínimo valor: 68.9 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8444f3f60f29fd8e4bd5e7bdf8d2bfc9 = L.circleMarker(
+                [41.6171214, 21.7168387],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_8444f3f60f29fd8e4bd5e7bdf8d2bfc9.bindTooltip(
+                `<div>
+                     País: North Macedonia<br>Máximo valor: 25.1 (Año: 2000)<br>Mínimo valor: 20.4 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6be9f5de69bd1d8a4ec6fab0f44e8494 = L.circleMarker(
+                [64.5731537, 11.52803643954819],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_6be9f5de69bd1d8a4ec6fab0f44e8494.bindTooltip(
+                `<div>
+                     País: Norway<br>Máximo valor: 13.5 (Año: 2019)<br>Mínimo valor: 11.7 (Año: 2011)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_df749ba6a442bbaec556c85d9271257a = L.circleMarker(
+                [21.0000287, 57.0036901],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_df749ba6a442bbaec556c85d9271257a.bindTooltip(
+                `<div>
+                     País: Oman<br>Máximo valor: 39.6 (Año: 2000)<br>Mínimo valor: 24.3 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0be16d29699e89ba9ab5c11b7929a4d1 = L.circleMarker(
+                [30.3308401, 71.247499],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_0be16d29699e89ba9ab5c11b7929a4d1.bindTooltip(
+                `<div>
+                     País: Pakistan<br>Máximo valor: 61.7 (Año: 2000)<br>Mínimo valor: 53.0 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0822958c340c3de647bb881f8c222b64 = L.circleMarker(
+                [7.51498, 134.58252],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_0822958c340c3de647bb881f8c222b64.bindTooltip(
+                `<div>
+                     País: Palau<br>Máximo valor: 36.9 (Año: 2007)<br>Mínimo valor: 33.5 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9ae227fd0e200d3ead2f877476587754 = L.circleMarker(
+                [8.559559, -81.1308434],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_9ae227fd0e200d3ead2f877476587754.bindTooltip(
+                `<div>
+                     País: Panama<br>Máximo valor: 31.0 (Año: 2000)<br>Mínimo valor: 16.0 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5e3b698e068806d5d5ca66bfc8483f72 = L.circleMarker(
+                [-5.6816069, 144.2489081],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_5e3b698e068806d5d5ca66bfc8483f72.bindTooltip(
+                `<div>
+                     País: Papua New Guinea<br>Máximo valor: 51.1 (Año: 2000)<br>Mínimo valor: 46.7 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8bdd6c1bdc90c1d8e405d915e2526a6a = L.circleMarker(
+                [-23.3165935, -58.1693445],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_8bdd6c1bdc90c1d8e405d915e2526a6a.bindTooltip(
+                `<div>
+                     País: Paraguay<br>Máximo valor: 32.8 (Año: 2006)<br>Mínimo valor: 27.9 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7a8d86f7c4c1b2e8595e339d45b1e9d6 = L.circleMarker(
+                [-6.8699697, -75.0458515],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_7a8d86f7c4c1b2e8595e339d45b1e9d6.bindTooltip(
+                `<div>
+                     País: Peru<br>Máximo valor: 44.4 (Año: 2004)<br>Mínimo valor: 29.6 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dd542a2fd34cfe189ee59d4e362cfd62 = L.circleMarker(
+                [12.7503486, 122.7312101],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_dd542a2fd34cfe189ee59d4e362cfd62.bindTooltip(
+                `<div>
+                     País: Philippines<br>Máximo valor: 35.0 (Año: 2000)<br>Mínimo valor: 13.5 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b033ce3eb7a206ac7656f12e173afdc8 = L.circleMarker(
+                [39.6621648, -8.1353519],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_b033ce3eb7a206ac7656f12e173afdc8.bindTooltip(
+                `<div>
+                     País: Portugal<br>Máximo valor: 14.3 (Año: 2019)<br>Mínimo valor: 12.4 (Año: 2009)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_48e87b9b6078f70b4f6f527ad602b40b = L.circleMarker(
+                [25.3336984, 51.2295295],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_48e87b9b6078f70b4f6f527ad602b40b.bindTooltip(
+                `<div>
+                     País: Qatar<br>Máximo valor: 25.2 (Año: 2000)<br>Mínimo valor: 21.8 (Año: 2015)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_54ee4a953bdd0239d74a264eef516365 = L.circleMarker(
+                [45.9852129, 24.6859225],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_54ee4a953bdd0239d74a264eef516365.bindTooltip(
+                `<div>
+                     País: Romania<br>Máximo valor: 36.0 (Año: 2000)<br>Mínimo valor: 27.1 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c831cd20a635cd77a447f3c65cd8efdf = L.circleMarker(
+                [64.6863136, 97.7453061],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_c831cd20a635cd77a447f3c65cd8efdf.bindTooltip(
+                `<div>
+                     País: Russian Federation<br>Máximo valor: 29.9 (Año: 2000)<br>Mínimo valor: 21.8 (Año: 2018)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_31432afeea31e3c803ed12349bdaa3c9 = L.circleMarker(
+                [-1.9646631, 30.0644358],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_31432afeea31e3c803ed12349bdaa3c9.bindTooltip(
+                `<div>
+                     País: Rwanda<br>Máximo valor: 61.3 (Año: 2000)<br>Mínimo valor: 37.4 (Año: 2015)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_985f1824ade2975efcd9bc4036bcbbf9 = L.circleMarker(
+                [-13.7693895, -172.12005],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_985f1824ade2975efcd9bc4036bcbbf9.bindTooltip(
+                `<div>
+                     País: Samoa<br>Máximo valor: 36.9 (Año: 2011)<br>Mínimo valor: 33.6 (Año: 2000)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9ea431607ab7e20585e90aac2bc4c854 = L.circleMarker(
+                [43.9458623, 12.458306],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_9ea431607ab7e20585e90aac2bc4c854.bindTooltip(
+                `<div>
+                     País: San Marino<br>Máximo valor: 12.8 (Año: 2019)<br>Mínimo valor: 11.3 (Año: 2011)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b2537386a04e9006bda8af10c3511f57 = L.circleMarker(
+                [0.9713095, 7.02255],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_b2537386a04e9006bda8af10c3511f57.bindTooltip(
+                `<div>
+                     País: Sao Tome and Principe<br>Máximo valor: 70.5 (Año: 2000)<br>Mínimo valor: 58.8 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_253f3708b5d9eb8c099380282e160d5e = L.circleMarker(
+                [25.6242618, 42.3528328],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_253f3708b5d9eb8c099380282e160d5e.bindTooltip(
+                `<div>
+                     País: Saudi Arabia<br>Máximo valor: 29.4 (Año: 2000)<br>Mínimo valor: 20.9 (Año: 2016)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e3e8ab0c2d848a3d23f163082dff1d55 = L.circleMarker(
+                [14.4750607, -14.4529612],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_e3e8ab0c2d848a3d23f163082dff1d55.bindTooltip(
+                `<div>
+                     País: Senegal<br>Máximo valor: 82.7 (Año: 2000)<br>Mínimo valor: 67.9 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fd6a9b93747adff239a07638b6bef8b1 = L.circleMarker(
+                [44.02432285, 21.07657433209902],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_fd6a9b93747adff239a07638b6bef8b1.bindTooltip(
+                `<div>
+                     País: Serbia<br>Máximo valor: 21.0 (Año: 2000)<br>Mínimo valor: 18.0 (Año: 2013)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_47487fdc49817bd27acf612d9925f44f = L.circleMarker(
+                [-4.6574977, 55.4540146],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_47487fdc49817bd27acf612d9925f44f.bindTooltip(
+                `<div>
+                     País: Seychelles<br>Máximo valor: 30.6 (Año: 2019)<br>Mínimo valor: 27.2 (Año: 2010)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_791e6c0cf0b43fa8fd796e7a7476d815 = L.circleMarker(
+                [8.6400349, -11.8400269],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_791e6c0cf0b43fa8fd796e7a7476d815.bindTooltip(
+                `<div>
+                     País: Sierra Leone<br>Máximo valor: 82.2 (Año: 2000)<br>Mínimo valor: 73.4 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bb6888f2b981e11ef18331f20218a0b4 = L.circleMarker(
+                [1.357107, 103.8194992],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_bb6888f2b981e11ef18331f20218a0b4.bindTooltip(
+                `<div>
+                     País: Singapore<br>Máximo valor: 13.5 (Año: 2019)<br>Mínimo valor: 11.1 (Año: 2006)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_53981acc768433164a16852ebaedbb7b = L.circleMarker(
+                [48.7411522, 19.4528646],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_53981acc768433164a16852ebaedbb7b.bindTooltip(
+                `<div>
+                     País: Slovak Republic<br>Máximo valor: 23.7 (Año: 2019)<br>Mínimo valor: 21.6 (Año: 2010)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b48505b53f9767b794e2bd9f8631a0e3 = L.circleMarker(
+                [46.1199444, 14.8153333],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_b48505b53f9767b794e2bd9f8631a0e3.bindTooltip(
+                `<div>
+                     País: Slovenia<br>Máximo valor: 18.3 (Año: 2000)<br>Mínimo valor: 16.7 (Año: 2013)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_564f91c000920a27217ab3f31519f07a = L.circleMarker(
+                [-8.7053941, 159.1070693851845],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_564f91c000920a27217ab3f31519f07a.bindTooltip(
+                `<div>
+                     País: Solomon Islands<br>Máximo valor: 46.0 (Año: 2006)<br>Mínimo valor: 38.1 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d81859ee98f42b7311d5549035436d98 = L.circleMarker(
+                [8.3676771, 49.083416],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_d81859ee98f42b7311d5549035436d98.bindTooltip(
+                `<div>
+                     País: Somalia<br>Máximo valor: 63.9 (Año: 2000)<br>Mínimo valor: 51.8 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_62942830d4b7467c86cf3d15e6226ba0 = L.circleMarker(
+                [-28.8166236, 24.991639],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_62942830d4b7467c86cf3d15e6226ba0.bindTooltip(
+                `<div>
+                     País: South Africa<br>Máximo valor: 44.4 (Año: 2019)<br>Mínimo valor: 34.5 (Año: 2012)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dbf02c0574a9a3f9b73b743fb4a3ad51 = L.circleMarker(
+                [7.8699431, 29.6667897],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_dbf02c0574a9a3f9b73b743fb4a3ad51.bindTooltip(
+                `<div>
+                     País: South Sudan<br>Máximo valor: 70.7 (Año: 2000)<br>Mínimo valor: 58.4 (Año: 2013)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ada686b2a8c604cefdf4d251b3d66c6a = L.circleMarker(
+                [39.3260685, -4.8379791],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_ada686b2a8c604cefdf4d251b3d66c6a.bindTooltip(
+                `<div>
+                     País: Spain<br>Máximo valor: 14.6 (Año: 2019)<br>Mínimo valor: 11.8 (Año: 2004)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_527737c1336cefce6354fb387ce8a287 = L.circleMarker(
+                [7.5554942, 80.7137847],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_527737c1336cefce6354fb387ce8a287.bindTooltip(
+                `<div>
+                     País: Sri Lanka<br>Máximo valor: 32.6 (Año: 2000)<br>Mínimo valor: 24.6 (Año: 2016)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bfe77ef4d18c0cc17e860b50d0ba90ff = L.circleMarker(
+                [17.250512, -62.6725973],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_bfe77ef4d18c0cc17e860b50d0ba90ff.bindTooltip(
+                `<div>
+                     País: St. Kitts and Nevis<br>Máximo valor: 25.5 (Año: 2000)<br>Mínimo valor: 20.4 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_39e6946784c33b858ed5ee9d11f6c0f7 = L.circleMarker(
+                [13.8250489, -60.975036],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_39e6946784c33b858ed5ee9d11f6c0f7.bindTooltip(
+                `<div>
+                     País: St. Lucia<br>Máximo valor: 22.6 (Año: 2008)<br>Mínimo valor: 21.8 (Año: 2015)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1e96b4afbfe458eb8676e0e5e9cdfca8 = L.circleMarker(
+                [12.90447, -61.2765569],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_1e96b4afbfe458eb8676e0e5e9cdfca8.bindTooltip(
+                `<div>
+                     País: St. Vincent and the Grenadines<br>Máximo valor: 26.7 (Año: 2000)<br>Mínimo valor: 20.3 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_63feddaf5e37a918a1855bfc9cd0c9e3 = L.circleMarker(
+                [15.0, 30.0],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_63feddaf5e37a918a1855bfc9cd0c9e3.bindTooltip(
+                `<div>
+                     País: Sudan<br>Máximo valor: 61.5 (Año: 2000)<br>Mínimo valor: 50.8 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_22627549486e485d46264b0912b47f12 = L.circleMarker(
+                [4.1413025, -56.0771187],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_22627549486e485d46264b0912b47f12.bindTooltip(
+                `<div>
+                     País: Suriname<br>Máximo valor: 33.1 (Año: 2000)<br>Mínimo valor: 25.9 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8d082b32ed704bf5821551d78e80bdaf = L.circleMarker(
+                [59.6749712, 14.5208584],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_8d082b32ed704bf5821551d78e80bdaf.bindTooltip(
+                `<div>
+                     País: Sweden<br>Máximo valor: 14.6 (Año: 2019)<br>Mínimo valor: 12.1 (Año: 2010)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_861873ed6ffb777343e012dd6e17e253 = L.circleMarker(
+                [46.7985624, 8.2319736],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_861873ed6ffb777343e012dd6e17e253.bindTooltip(
+                `<div>
+                     País: Switzerland<br>Máximo valor: 14.0 (Año: 2019)<br>Mínimo valor: 11.0 (Año: 2005)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d6923f09c5c83a86e21f086a4dfc014f = L.circleMarker(
+                [34.6401861, 39.0494106],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_d6923f09c5c83a86e21f086a4dfc014f.bindTooltip(
+                `<div>
+                     País: Syrian Arab Republic<br>Máximo valor: 33.3 (Año: 2000)<br>Mínimo valor: 30.5 (Año: 2011)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_675dcca607b1574654d48a39b7631841 = L.circleMarker(
+                [38.6281733, 70.8156541],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_675dcca607b1574654d48a39b7631841.bindTooltip(
+                `<div>
+                     País: Tajikistan<br>Máximo valor: 46.1 (Año: 2000)<br>Mínimo valor: 32.5 (Año: 2011)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9e496fa11a93efb2a1652afc1839e0d4 = L.circleMarker(
+                [-6.5247123, 35.7878438],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_9e496fa11a93efb2a1652afc1839e0d4.bindTooltip(
+                `<div>
+                     País: Tanzania<br>Máximo valor: 72.1 (Año: 2000)<br>Mínimo valor: 56.1 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a46382732620bf45bf081a5dec6a7397 = L.circleMarker(
+                [14.8971921, 100.83273],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_a46382732620bf45bf081a5dec6a7397.bindTooltip(
+                `<div>
+                     País: Thailand<br>Máximo valor: 26.5 (Año: 2000)<br>Mínimo valor: 24.2 (Año: 2013)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b6a84b0579d5ece6573812277b0446ae = L.circleMarker(
+                [-8.7443169, 126.063482],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_b6a84b0579d5ece6573812277b0446ae.bindTooltip(
+                `<div>
+                     País: Timor-Leste<br>Máximo valor: 51.3 (Año: 2000)<br>Mínimo valor: 44.9 (Año: 2010)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4d69f4baa80c22e4ccb7cad7b28ffe9c = L.circleMarker(
+                [8.7800265, 1.0199765],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_4d69f4baa80c22e4ccb7cad7b28ffe9c.bindTooltip(
+                `<div>
+                     País: Togo<br>Máximo valor: 79.8 (Año: 2000)<br>Mínimo valor: 72.4 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fa5ca575ed88b21cd0f4a59f88b49bdf = L.circleMarker(
+                [-19.9160819, -175.202642],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_fa5ca575ed88b21cd0f4a59f88b49bdf.bindTooltip(
+                `<div>
+                     País: Tonga<br>Máximo valor: 34.0 (Año: 2019)<br>Mínimo valor: 31.3 (Año: 2000)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f21f8ccbfa1d3d4abf7c56f8aef56e71 = L.circleMarker(
+                [10.7466905, -61.0840075],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_f21f8ccbfa1d3d4abf7c56f8aef56e71.bindTooltip(
+                `<div>
+                     País: Trinidad and Tobago<br>Máximo valor: 30.8 (Año: 2000)<br>Mínimo valor: 22.9 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8674c881708b7fd1306250448ecbb0d0 = L.circleMarker(
+                [36.8002068, 10.1857757],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_8674c881708b7fd1306250448ecbb0d0.bindTooltip(
+                `<div>
+                     País: Tunisia<br>Máximo valor: 35.6 (Año: 2000)<br>Mínimo valor: 29.3 (Año: 2015)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e20c284947599b1c2f41c1fee49ad510 = L.circleMarker(
+                [39.3763807, 59.3924609],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_e20c284947599b1c2f41c1fee49ad510.bindTooltip(
+                `<div>
+                     País: Turkmenistan<br>Máximo valor: 40.7 (Año: 2000)<br>Mínimo valor: 30.8 (Año: 2012)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_96cab459223847162775485e152dd804 = L.circleMarker(
+                [-8.6405212, 179.1582918181797],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_96cab459223847162775485e152dd804.bindTooltip(
+                `<div>
+                     País: Tuvalu<br>Máximo valor: 51.4 (Año: 2007)<br>Mínimo valor: 41.9 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_091fe37c15a21c63923d9368b32c3bdc = L.circleMarker(
+                [1.5333554, 32.2166578],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_091fe37c15a21c63923d9368b32c3bdc.bindTooltip(
+                `<div>
+                     País: Uganda<br>Máximo valor: 72.9 (Año: 2000)<br>Mínimo valor: 51.7 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3097e33a29e760e4300948f2fc5ef635 = L.circleMarker(
+                [49.4871968, 31.2718321],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_3097e33a29e760e4300948f2fc5ef635.bindTooltip(
+                `<div>
+                     País: Ukraine<br>Máximo valor: 27.8 (Año: 2000)<br>Mínimo valor: 23.4 (Año: 2013)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7ca1de9c3adb1fb6aaf0832f5dad5e96 = L.circleMarker(
+                [24.0002488, 53.9994829],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_7ca1de9c3adb1fb6aaf0832f5dad5e96.bindTooltip(
+                `<div>
+                     País: United Arab Emirates<br>Máximo valor: 20.4 (Año: 2019)<br>Mínimo valor: 18.7 (Año: 2005)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6383fd6a63b3e98ace4bb553375e8b3a = L.circleMarker(
+                [54.7023545, -3.2765753],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_6383fd6a63b3e98ace4bb553375e8b3a.bindTooltip(
+                `<div>
+                     País: United Kingdom<br>Máximo valor: 15.5 (Año: 2019)<br>Mínimo valor: 13.5 (Año: 2005)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_028f5dd11de84c1a844b0a9147cd68db = L.circleMarker(
+                [39.7837304, -100.445882],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_028f5dd11de84c1a844b0a9147cd68db.bindTooltip(
+                `<div>
+                     País: United States<br>Máximo valor: 6.2 (Año: 2000)<br>Mínimo valor: 5.8 (Año: 2015)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5c9fde2511fc88ebac00f4b1fe73786d = L.circleMarker(
+                [-32.8755548, -56.0201525],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_5c9fde2511fc88ebac00f4b1fe73786d.bindTooltip(
+                `<div>
+                     País: Uruguay<br>Máximo valor: 25.1 (Año: 2019)<br>Mínimo valor: 23.3 (Año: 2011)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d76b4c7a0eda9e65b6e39440cb61cdb6 = L.circleMarker(
+                [41.32373, 63.9528098],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_d76b4c7a0eda9e65b6e39440cb61cdb6.bindTooltip(
+                `<div>
+                     País: Uzbekistan<br>Máximo valor: 49.3 (Año: 2000)<br>Mínimo valor: 21.9 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6e059459e48f88af9bfb7c2fb544e1db = L.circleMarker(
+                [-16.5255069, 168.1069154],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_6e059459e48f88af9bfb7c2fb544e1db.bindTooltip(
+                `<div>
+                     País: Vanuatu<br>Máximo valor: 35.3 (Año: 2006)<br>Mínimo valor: 31.0 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_50274a61a2bad50979f7c7e995942bea = L.circleMarker(
+                [10.0736612, -69.35359440708659],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_50274a61a2bad50979f7c7e995942bea.bindTooltip(
+                `<div>
+                     País: Venezuela, RB<br>Máximo valor: 29.1 (Año: 2000)<br>Mínimo valor: 7.7 (Año: 2018)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_28c47988ef8ed61cc03e4f6a53d5953f = L.circleMarker(
+                [15.9266657, 107.9650855],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_28c47988ef8ed61cc03e4f6a53d5953f.bindTooltip(
+                `<div>
+                     País: Viet Nam<br>Máximo valor: 33.6 (Año: 2000)<br>Mínimo valor: 21.1 (Año: 2013)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7b8189f7951d71bd5cafffa134385298 = L.circleMarker(
+                [15.552138, 48.516388],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_7b8189f7951d71bd5cafffa134385298.bindTooltip(
+                `<div>
+                     País: Yemen, Rep.<br>Máximo valor: 83.6 (Año: 2000)<br>Mínimo valor: 79.5 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_741119e4eb15a990ad22161541ee6a28 = L.circleMarker(
+                [-14.5189121, 27.5589884],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_741119e4eb15a990ad22161541ee6a28.bindTooltip(
+                `<div>
+                     País: Zambia<br>Máximo valor: 65.6 (Año: 2000)<br>Mínimo valor: 53.9 (Año: 2014)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6c937812fc013d0fb9f7207f124074cb = L.circleMarker(
+                [-18.4554963, 29.7468414],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "cyan", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_88facd2e344729a535d5d0c362ecd171);
+        
+    
+            circle_marker_6c937812fc013d0fb9f7207f124074cb.bindTooltip(
+                `<div>
+                     País: Zimbabwe<br>Máximo valor: 51.2 (Año: 2008)<br>Mínimo valor: 37.8 (Año: 2019)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            marker_cluster_88facd2e344729a535d5d0c362ecd171.addTo(map_dc5050a5f274464ab129385e12fc7b69);
+        
+</script>
+</html>
