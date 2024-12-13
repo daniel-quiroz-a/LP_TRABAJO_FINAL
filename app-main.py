@@ -420,11 +420,606 @@ elif menu == "Visualización de datos":
     )
 
     if viz_menu == "Situación Global":
-        st.write("Queda pendiente")
+
+        # Dashboard Principal
+        st.write("### Análisis visual más detallado de la situación global e histórica de la anemia infantil")
+        st.write("### Indicadores de resumen en 2019")
+
+        # Indicadores (Méritos)
+        col1, col2, col3 = st.columns([0.95, 0.7, 1.35])
+
+        with col1:
+            st.metric(label="Prevalencia Global (%)", value="39.8%", delta="-0.5% respecto al año 2015")
+
+        with col2:
+            st.metric(label="Continente más afectado", value="Africa (60.2 %)")
+
+        with col3:
+            st.subheader("Prevalencia histórica de anemia por niveles de ingresos")
+            st.markdown("Los datos muestran una diferencia en los niveles de anemia infantil según el nivel de ingresos promedio de los países")
+
+        col1, col2 = st.columns([1.55, 1.45])
+
+        with col1:
+            # Cargar los datos desde el archivo CSV
+            data_historico = pd.read_csv("data/world_bank_anemia_mundial_listo.csv")
+
+            # Crear el gráfico de líneas interactivo con Plotly
+            fig = go.Figure()
+
+            # Agregar la línea principal al gráfico
+            fig.add_trace(go.Scatter(
+                x=data_historico["year"],
+                y=data_historico["prevalencia (%)"],
+                mode='lines+markers',
+                name='Prevalencia',
+                line=dict(color='#636efa', width=3),
+                marker=dict(size=7, color='#636efa', symbol='circle', line=dict(color='white', width=2)),
+                hovertemplate="<b>Año:</b> %{x}<br><b>Prevalencia:</b> %{y:.2f}%<extra></extra>"
+            ))
+
+            fig.update_traces(line_shape='spline')
+
+            # Personalización del diseño del gráfico
+            fig.update_layout(
+                title=dict(
+                    text="<span style='font-size:24px; color:#1f77b4; font-family:Roboto;'><b>🌎 Prevalencia Histórica de Anemia infantil (2000-2019) 🩸</b></span>",
+                    x=0.07 # Centrar el título
+                ),
+                xaxis=dict(
+                    title="Año",
+                    title_font=dict(size=16, color='black'),
+                    tickfont=dict(size=14, color='black'),
+                    tickmode="linear",
+                    tickangle=45,  # Rotar los ticks para que no se apilen
+                    range=[1999.5, 2019.5],
+                    showline=True,
+                    linewidth=2,
+                    linecolor='gray',
+                    gridcolor='lightgray'
+                ),
+                yaxis=dict(
+                    title="Prevalencia (%)",
+                    title_font=dict(size=16, color='black'),
+                    tickfont=dict(size=14, color='black'),
+                    range=[25, 50],  # Ajustar el rango según los datos
+                    showline=True,
+                    linewidth=2,
+                    linecolor='gray',
+                    gridcolor='lightgray'
+                ),
+                plot_bgcolor='rgba(240,240,240,0.95)',  # Fondo claro para el gráfico
+                paper_bgcolor='white',
+                margin=dict(t=100, b=100, l=80, r=80)
+            )
+
+            # Mejorar interactividad (opcional)
+            fig.update_traces(marker_line_width=1.5)
+            fig.update_layout(
+                hovermode="x",  # Mostrar valores al pasar sobre la línea
+                template="simple_white"
+            )
+
+            # Mostrar el gráfico en Streamlit (si lo necesitas)
+            st.plotly_chart(fig)
+
+        with col2:
+
+            # Cargar datos del CSV
+            data_nivelingresos = pd.read_csv("data/world_bank_anemia_ingresos_listo.csv")
+
+            # Asegurarse de que los datos de 'year' sean numéricos
+            data_nivelingresos['year'] = pd.to_numeric(data_nivelingresos['year'], errors='coerce')
+            data_nivelingresos = data_nivelingresos.dropna(subset=['year', 'prevalencia (%)'])  # Eliminar filas con NaN
+            data_nivelingresos['year'] = data_nivelingresos['year'].astype(int)
+
+            # Obtener los niveles de ingresos únicos
+            income_levels = sorted(data_nivelingresos['nivel de ingresos'].unique())
+
+            # Asignar colores personalizados a cada nivel de ingresos
+            colors = {
+                "Bajos ingresos": "#FF5733",  # Rojo ladrillo
+                "Ingresos bajos y medios": "#FFBD33",  # Amarillo cálido
+                "Ingreso medio": "#5b8f68",  # Verde vibrante
+                "Ingreso medio alto": "#3380FF",  # Azul moderno
+                "Ingresos altos": "#9B33FF"  # Morado sofisticado
+            }
+
+            # Crear la figura Plotly
+            fig = go.Figure()
+
+            # Añadir las trazas de datos
+            for i, level in enumerate(income_levels):
+                # Filtrar datos por nivel de ingresos
+                level_data = data_nivelingresos[data_nivelingresos['nivel de ingresos'] == level]
+
+                # Añadir la línea al gráfico
+                fig.add_trace(
+                    go.Scatter(
+                        x=level_data['year'],
+                        y=level_data['prevalencia (%)'],
+                        mode="lines+markers",
+                        line=dict(color=colors.get(level, "gray"), width=2),  # Usar colores predefinidos si existen
+                        marker=dict(size=6),  # Tamaño de los marcadores
+                        name=level,  # Nombre del nivel de ingresos
+                        hovertemplate="<b>%{name}</b><br>Año: %{x}<br>Prevalencia: %{y:.2f}%<extra></extra>",
+                    )
+                )
+
+            # Añadir anotaciones cerca del último punto para cada nivel de ingresos
+            y_offset = 0.5  # Ajuste vertical entre las anotaciones (evitar superposición)
+            for i, level in enumerate(income_levels):
+                level_data = data_nivelingresos[data_nivelingresos['nivel de ingresos'] == level]
+                last_row = level_data[level_data['year'] == level_data['year'].max()]
+
+                if not last_row.empty:
+                    last_year = last_row['year'].values[0]
+                    last_value = last_row['prevalencia (%)'].values[0]
+
+                    # Añadir la anotación
+                    fig.add_annotation(
+                        x=last_year - 3,  # Un poco a la derecha del último año
+                        y=last_value + 1.5,  # Ajuste vertical por nivel
+                        text=f"<b>{level}</b>",  # Texto del nivel de ingresos
+                        font=dict(size=10, color=colors.get(level, "gray")),  # Personalización de la fuente
+                        showarrow=False,
+                        xanchor="left",
+                        align="left",
+                    )
+
+            # Configurar diseño del gráfico
+            fig.update_layout(
+                title= "",
+                xaxis=dict(
+                    title='Año',
+                    tickmode='array',
+                    tickvals=sorted(data_nivelingresos['year'].unique()),
+                    showline=True,
+                    linecolor='black',
+                    ticks='outside',  # Marcas fuera del eje
+                    tickwidth=1,
+                    tickangle=45
+                ),
+                yaxis=dict(
+                    title='Prevalencia (%)',
+                    showline=True,
+                    linewidth=1,
+                    linecolor='black',
+                ),
+                plot_bgcolor='rgba(240,240,240,0.95)',  # Fondo blanco para mayor legibilidad
+                showlegend=False,  # Eliminamos la leyenda; usamos anotaciones dinámicas
+                width=900,
+                height=600,  # Ajustar el tamaño del gráfico en Streamlit
+                margin=dict(t=10)
+            )
+
+            # Mostrar gráfico en Streamlit
+            st.plotly_chart(fig)
+
+        col1, col2 = st.columns([1.2, 0.8])
+        with col1:
+            # Cargar los datos
+            st.subheader("Comparador histórico de anemia infantil para cada país")
+            data_historico_pais_est = pd.read_csv("data/world_bank_anemia_paises_listo.csv")
+            data_historico_pais_est['year'] = pd.to_numeric(data_historico_pais_est['year'], errors='coerce')
+            data_historico_pais_est['year'] = data_historico_pais_est['year'].astype(int)
+
+            # Obtener la lista de países únicos
+            countries = sorted(data_historico_pais_est['pais'].unique())
+
+
+            # Asignar un color único a cada país
+            def assign_colors(countries):
+                colors = {}
+                for country in countries:
+                    # Asignamos un color aleatorio a cada país
+                    colors[
+                        country] = f'rgba({random.randint(0, 255)},{random.randint(0, 255)},{random.randint(0, 255)}, 0.8)'
+                return colors
+
+
+            colors = assign_colors(countries)
+
+
+            # Función para completar los años faltantes y hacer líneas continuas
+            def completar_anios(data, country):
+                # Filtrar datos del país
+                country_data = data[data['pais'] == country].copy()
+
+                # Generar el rango completo de años
+                all_years = pd.DataFrame({'year': range(country_data['year'].min(), country_data['year'].max() + 1)})
+
+                # Unir con los datos originales y llenar los valores faltantes mediante interpolación
+                completed_data = pd.merge(all_years, country_data, on='year', how='left')
+                completed_data['prevalencia (%)'] = completed_data['prevalencia (%)'].interpolate()
+
+                # Añadir el nombre del país
+                completed_data['pais'] = country
+                return completed_data
+
+
+            # Función para graficar prevalencias históricas basadas en los países seleccionados
+            def plot_selected_countries_plotly(countries_selected):
+                if not countries_selected:
+                    st.warning("Por favor selecciona al menos un país.")
+                    return
+
+                # Crear una figura
+                fig = go.Figure()
+
+                for country in countries_selected:
+                    # Completar los años faltantes
+                    country_data = completar_anios(data_historico_pais_est, country)
+
+                    # Obtener el color para el país
+                    country_color = colors[country]
+
+                    # Añadir el segmento antes de 2020 (línea continua)
+                    fig.add_trace(
+                        go.Scatter(
+                            x=country_data['year'],
+                            y=country_data['prevalencia (%)'],
+                            mode='lines+markers',
+                            name=country,
+                            hovertemplate="Prevalencia: %{y:.2f}<extra></extra>",
+                            # Personalizar el tooltip sin el símbolo '%'
+                            line=dict(color=country_color)  # Usamos el color del país
+                        )
+                    )
+
+                    # Colocar el nombre del país ligeramente desplazado a la derecha
+                    year_2019_data = country_data[country_data['year'] == 2019]
+                    if not year_2019_data.empty:
+                        # Obtenemos el valor de prevalencia para 2019
+                        prev_2019 = year_2019_data['prevalencia (%)'].values[0]
+                        fig.add_annotation(
+                            x=2019 + 0.5,  # Desplazamos un poco a la derecha de 2030
+                            y=prev_2019,
+                            text=country,
+                            showarrow=False,
+                            font=dict(size=10, color=country_color),
+                            xanchor='left',  # Alineación del texto a la izquierda
+                            align='left'  # Alineación del texto a la izquierda
+                        )
+
+                # Ajustar el diseño del gráfico
+                fig.update_layout(
+                    title={
+                        'text': 'Prevalencia histórica de anemia',
+                        'x': 0.5,  # Centrar el título
+                        'xanchor': 'center',  # Asegurar que el anclaje sea en el centro
+                    },
+                    xaxis=dict(
+                        title=None,  # Quitar el título del eje X
+                        tickangle=45,
+                        showline=True,
+                        linecolor='black',
+                        ticks='outside',  # Mostrar marcas de graduación principales hacia el exterior
+                        tickwidth=1,  # Grosor de las marcas de graduación
+                        tickvals=list(
+                            range(
+                                data_historico_pais_est['year'].min(),
+                                data_historico_pais_est['year'].max() + 1
+                            )
+                        )  # Asegurar que todos los años estén en el eje X
+                    ),
+                    yaxis=dict(
+                        showline=True,  # Mostrar la línea del eje Y
+                        linewidth=1,  # Definir el grosor de la línea
+                        linecolor='black'  # Definir el color de la línea
+                    ),
+                    showlegend=True,
+                    legend_title='Países',
+                    yaxis_title='Prevalencia (%)',
+                    template='plotly_white',
+                    width=850  # Ampliar el ancho del gráfico,
+                )
+
+                # Mostrar el gráfico en Streamlit
+                st.plotly_chart(fig)
+
+
+            # Crear checkbox para seleccionar países
+            selected_countries = st.multiselect('Selecciona los países', countries, placeholder="Elija un país")
+
+            # Actualizar y mostrar gráfico dinámicamente según selección de países
+            if selected_countries:
+                plot_selected_countries_plotly(selected_countries)
+            else:
+                st.warning("Por favor selecciona al menos un país.")
+
+        with col2:
+            # Cargar los datos
+            data_ind_anemia = pd.read_csv("data/dhs_anemia_final.csv")
+
+            # Limpiar y renombrar columnas
+            data_ind_anemia.drop(data_ind_anemia.columns[[3, 4, 6, 7, 9, 10, 12, 13]], axis=1, inplace=True)
+            data_ind_anemia.rename(
+                columns={
+                    'Valor Cualquier': 'Valor General',
+                    'Year': 'Año'
+                },
+                inplace=True
+            )
+
+
+            # Crear la Gauge con Plotly
+            def create_gauge(value, country):
+                """
+                Crear un velocímetro circular estilizado con Plotly y una flecha personalizada.
+                """
+                if value < 20:
+                    estado = "Anemia leve"
+                elif 20 <= value < 40:
+                    estado = "Anemia moderada"
+                else:
+                    estado = "Anemia alta"
+                # Crear la figura base del gauge
+                fig = go.Figure(
+                    go.Indicator(
+                        mode="gauge",
+                        value=value,
+                        gauge={
+                            'axis': {'range': [0, 100], 'tickwidth': 2, 'tickcolor': "#000"},
+                            'bar': {'color': "#295491"},  # Barra roja
+                            'steps': [
+                                {'range': [0, 20], 'color': "#32CD32"},  # Verde
+                                {'range': [20, 40], 'color': "#FFD700"},  # Amarillo
+                                {'range': [40, 100], 'color': "#FF4D4D"},  # Rojo
+                            ],
+                            'threshold': {
+                                'line': {'color': "black", 'width': 4},
+                                'thickness': 0.85,
+                                'value': value  # Dónde apunta la aguja
+                            }
+                        }
+                    )
+                )
+
+                # Calcular la posición de la flecha en coordenadas polares
+                angle = (value / 100) * 180  # Convertir el valor a un ángulo en grados
+                angle_rad = np.radians(angle)  # Convertir a radianes
+                unit = np.array([np.cos(np.pi-angle_rad), np.sin(np.pi-angle_rad)])
+                ro = 0.9
+                ri = 0
+                ax, ay = ri * unit
+                x, y = ro * unit
+
+                # Agregar la flecha al gráfico
+                fig.add_annotation(
+                    ax=ax,
+                    ay=ay,
+                    axref='x',
+                    ayref='y',
+                    x=x,
+                    y=y,
+                    xref='x',
+                    yref='y',
+                    showarrow=True,
+                    arrowhead=3,
+                    arrowsize=1,
+                    arrowwidth=4,
+                    arrowcolor="#e3e7e8"
+                )
+
+                fig.add_annotation(
+                    ax=ax,
+                    ay=ay,
+                    axref='x',
+                    ayref='y',
+                    x=x,
+                    y=y,
+                    xref='x',
+                    yref='y',
+                    showarrow=True,
+                    arrowhead=3,
+                    arrowsize=1,
+                    arrowwidth=4,
+                    arrowcolor="black"
+                )
+
+                fig.add_trace(
+                    go.Scatter(
+                        x=[x], y=[y],  # Coordenadas ficticias para hover centralizado
+                        mode="markers",
+                        marker=dict(size=1, opacity=0),
+                        hoverinfo="text",  # Muestra solo texto definido en hovertext
+                        hovertext=f"<b>{estado}</b><br>Prevalencia: {value}%"
+                    )
+                )
+
+
+                # Configuración del diseño
+                fig.update_layout(
+                    height=300,  # Altura del gráfico
+                    margin=dict(t=70, b=10, l=70, r=70),  # Márgenes compactos
+                    font=dict(color="black", family="Arial"),  # Estilo tipográfico (limpio)
+                    xaxis={'showgrid': False, 'showticklabels': False, 'range': [-1, 1]},
+                    yaxis={'showgrid': False, 'showticklabels': False, 'range': [0, 1]},
+
+                )
+                # Mostrar cuadrícula para facilitar el debug
+                fig.update_yaxes(
+                    scaleanchor="x",
+                    scaleratio=1,
+                )
+                return fig
+
+
+            # Sidebar interactivo para seleccionar el país
+            st.subheader("Reportes de la gravedad de anemia infantil")
+            pais_seleccionado = st.selectbox("Selecciona un país:", data_ind_anemia["Pais"].unique())
+
+            # Datos del país seleccionado
+            if pais_seleccionado:
+                st.subheader(f"Prevalencia de anemia general en {pais_seleccionado} según el reporte más reciente")
+
+                # Filtrar datos del país
+                data_paises = data_ind_anemia[data_ind_anemia["Pais"] == pais_seleccionado].reset_index(drop=True)
+
+                # Obtener el valor más reciente de "Valor Real"
+                latest_year = data_paises["Año"].max()
+                valor_real = data_paises[data_paises["Año"] == latest_year]["Valor General"].values[0]
+
+                # Gauge para el valor actual
+                st.plotly_chart(create_gauge(valor_real, pais_seleccionado), use_container_width=True)
+                st.markdown(f"""
+                    <div style="text-align: center; margin-left: 35px; margin-top: -30px; margin-bottom: -20px;">
+                        <h2 style='color: black; display: inline-block;'>{valor_real}%</h2>
+                    </div>
+                """, unsafe_allow_html=True)
+                st.markdown(f"""
+                            <div style="text-align: center; margin-left: 35px; margin-top: -20px; margin-bottom: -20px;">
+                                <h3 style='color: black; display: inline-block;'>{pais_seleccionado}</h3>
+                            </div>
+                                """, unsafe_allow_html=True)
+
+                # Tabla bonita con Streamlit
+                st.subheader("Reportes de gravedad por año")
+                st.dataframe(data_paises.style.format({
+                    "Año": "{:.0f}",
+                    "Valor General": "{:.2f}%",
+                    "Valor Leve": "{:.2f}%",
+                    "Valor Moderado": "{:.2f}%",
+                    "Valor Severo": "{:.2f}%"
+                }).background_gradient(cmap="YlOrRd", vmin=0, vmax=60,
+                                       subset=["Valor Leve", "Valor Moderado", "Valor Severo"])
+                             .set_properties(**{"text-align": "center"}))  # Centrar contenido de la tabla
 
 
     elif viz_menu == "Análisis geográfico":
-        st.write("Queda pendiente")
+        # Lectura del archivo csv de prevalencia de anemia para país y continente
+        data_country = pd.read_csv("data/world_bank_continentes.csv")
+
+        col1, col2, col3 = st.columns([1.15, 0.1, 1.75])
+
+        with col1:
+            st.subheader("Veamos la situación de la anemia infantil en cada año 🌍👀")
+            anio = st.slider("Seleccione un año para visualizar", 2000, 2019, 2019)
+            # Filtrar los datos para el año seleccionado
+            data_filtrada = data_country[data_country['date'] == anio]
+
+            # Ordenar por el valor de anemia y seleccionar los 10 primeros
+            top_10 = data_filtrada.nlargest(10, 'value')
+
+            # Crear el gráfico con Plotly Go
+            fig = go.Figure()
+
+            # Agregar barras al gráfico
+            fig.add_trace(
+                go.Bar(
+                    x=top_10['country.value'],
+                    y=top_10['value'],
+                    marker=dict(color='indianred'),
+                    text=top_10['Continente'],  # Mostrar el continente al pasar el mouse
+                    textposition="outside",
+                    hovertemplate="<b>País:</b> %{x}<br>" +
+                                  "<b>Porcentaje de Anemia:</b> %{y}%<br>" +
+                                  "<b>Continente:</b> %{text}<extra></extra>"
+                )
+            )
+
+            # Configurar el diseño del gráfico
+            fig.update_layout(
+                title=f"Top 10 países con mayor anemia infantil en {anio}",
+                xaxis=dict(title="País", tickangle=-45),
+                yaxis=dict(title="Porcentaje de Anemia", range=(0, 101)),
+                template="plotly_white",
+                title_font=dict(size=20),
+                margin=dict(l=40, r=40, t=60, b=40),
+                height=600
+            )
+
+            # Mostrar el gráfico
+            st.plotly_chart(fig)
+
+        with col3:
+            st.subheader(f"¿Cómo la anemia infantil ha afectado a cada contintente en {anio}?")
+            with st.form(key='myform', border=False):
+                # Mapa 1: Anemia por Continentes
+                # Crear diccionario sobre continentes
+
+                data_recent = data_country.loc[data_country.groupby("Continente")["date"].idxmax()]
+                continent_stats = (
+                    data_country[data_country["date"] == anio]
+                    .groupby("Continente")[["country.value", "value", "date"]]
+                    .apply(lambda group: pd.Series({
+                        "max_prevalence_country": group.loc[group["value"].idxmax()]["country.value"],
+                        "max_prevalence_value": group["value"].max(),
+                        "min_prevalence_country": group.loc[group["value"].idxmin()]["country.value"],
+                        "min_prevalence_value": group["value"].min()
+                    }))
+                    .reset_index()
+                )
+
+                # Coordenadas aproximadas de los continentes
+                locations = {
+                    "Africa": [9.1, 23.7],
+                    "Asia": [34.0, 100.0],
+                    "Europe": [54.0, 15.0],
+                    "North America": [37.0, -98.0],
+                    "South America": [-15.0, -60.0],
+                    "Oceania": [-20.0, 130.0]
+                }
+
+                # Crear el mapa
+                m1 = folium.Map(location=[0, 0], zoom_start=2)
+
+                for _, row in continent_stats.iterrows():
+                    continent = row["Continente"]
+                    tooltip_text = f"""
+                                        <b>{continent}</b><br>
+                                        <i>País con mayor prevalencia:</i> {row['max_prevalence_country']} ({row['max_prevalence_value']}%)<br>
+                                        <i>País con menor prevalencia:</i> {row['min_prevalence_country']} ({row['min_prevalence_value']}%)
+                                        """
+                    folium.CircleMarker(
+                        location=locations[continent],
+                        radius=10,
+                        color="blue",
+                        fill=True,
+                        fill_color="blue",
+                        fill_opacity=0.6,
+                        tooltip=tooltip_text,
+                    ).add_to(m1)
+
+
+                # Mostrar el mapa en Streamlit
+                # Mapa 1: Continentes
+                mapa1 = m1
+                st_folium(mapa1, width=900)
+                # Esconder el boton
+                hide_button_style = """
+                    <style>
+                    button[data-testid="stBaseButton-secondaryFormSubmit"] {
+                        visibility: hidden;
+                    }
+                    </style>
+                """
+                st.markdown(hide_button_style, unsafe_allow_html=True)
+                submit_button = st.form_submit_button(label="",
+                                                      disabled=True)
+                if submit_button: pass
+
+        st.subheader("Ahora un vistazo más completo en cada país")
+        # Mapa 2: Países
+        # Se mostrará como HTML debido a que Streamlit-folium no tiene compatibilidad con MarkerCluster
+        # Además no es necesario la interacción dinámica con el usuario por lo que el HTML es suficiente
+        tog = tog.st_toggle_switch(label="Mostrar datos totales",
+                             key="Key1",
+                             default_value=False,
+                             label_after=False,
+                             inactive_color='#D3D3D3',
+                             active_color="#D3D3D3",
+                             track_color="#29B5E8"
+                             )
+        if tog:
+            with open("data/mapa_pais.html", 'r') as f:
+                html_data = f.read()
+                st.components.v1.html(html_data, width=1200, height=700)
+        else:
+            with open("data/mapa_prevalencia_max_min.html", 'r') as f:
+                html_data = f.read()
+                st.components.v1.html(html_data, width=1200, height=700)
 
     elif viz_menu == "Proyecciones":
             st.markdown("""
