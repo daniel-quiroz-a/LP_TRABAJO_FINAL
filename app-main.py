@@ -55,11 +55,356 @@ with st.sidebar:
 # Contenido dinámico según opción seleccionada
 if menu == "Introducción":
     st.title("Introducción")
-    # Queda pendiente
+
+    # Concepto 1: ¿Qué es la Anemia?
+    col1, col2 = st.columns([3, 2])  # Relación 3:2 para que el texto esté a la izquierda y la imagen a la derecha
+
+    with col1:
+        st.markdown(
+            """
+            <style>
+            .concepto-container {
+                background-color: rgba(0, 0, 0, 0.7);  /* Fondo semi-transparente */
+                padding: 40px;
+                border-radius: 15px;
+                color: white;
+                margin-bottom: 30px;
+                height: auto;
+            }
+            .concepto-container h3 {
+                text-align: center;
+                font-size: 1.8em;
+            }
+            .concepto-container p {
+                text-align: justify;
+                font-size: 1.2em;
+            }
+            </style>
+            <div class="concepto-container">
+                <h3>¿Qué es la Anemia?</h3>
+                <p>La <strong>anemia</strong> es una condición médica caracterizada por una insuficiencia de glóbulos rojos o hemoglobina en la sangre.
+                Esta carencia provoca que los tejidos del cuerpo no reciban suficiente oxígeno, lo cual puede generar síntomas como fatiga,
+                debilidad, mareos y palidez. En los niños, la anemia puede afectar seriamente su desarrollo físico y cognitivo, ya que durante
+                sus primeros años de vida, el crecimiento y el desarrollo cerebral necesitan niveles adecuados de oxígeno.</p>
+                <p>
+                Existen diferentes tipos de anemia, siendo la más común la <strong>anemia ferropénica</strong>, causada por una deficiencia de hierro.
+                El hierro es un componente crucial de la hemoglobina, la proteína que permite a los glóbulos rojos transportar oxígeno. Sin
+                suficiente hierro, el cuerpo produce menos hemoglobina y, por ende, menos glóbulos rojos saludables.
+                </p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+    with col2:
+        st.image("https://elmen.pe/wp-content/uploads/2023/03/Anemia-scaled.jpg", use_container_width=True)
+
+    # Concepto 2: Efectos y poblacion vulnerable
+    col1, col2 = st.columns([2, 3])  # Relación 3:2 para que el texto esté a la izquierda y la imagen a la derecha
+
+    with col2:
+        st.markdown(
+            """
+            <style>
+            .effect-container {
+                background-color: rgba(0, 0, 0, 0.7);  /* Fondo semi-transparente */
+                padding: 30px;
+                border-radius: 15px;
+                color: white;
+                margin-bottom: 30px;
+                height: auto;
+            }
+            .effect-container h3 {
+                text-align: center;
+                font-size: 1.8em;
+            }
+            .effect-container p {
+                text-align: justify;
+                font-size: 1.2em;
+            }
+            </style>
+            <div class="effect-container">
+                <h3>Efectos y condiciones de vulnerabilidad</h3>
+                <p>La <strong>anemia</strong> se asocia con una variedad de efectos adversos en la salud y puede incrementar la vulnerabilidad a otras condiciones médicas. Entre los efectos más destacados se encuentran la <strong>disminución de la capacidad física y la función cognitiva</strong>, que puede impactar en el rendimiento laboral y académico.</p>
+                <p>A nivel celular, la falta de oxígeno afecta el <strong>metabolismo energético</strong>, lo que puede provocar una disminución en la capacidad de regeneración celular y una mayor susceptibilidad a infecciones. Esto se debe a que las células inmunitarias también requieren oxígeno para funcionar eficazmente.</p>
+                <p>En general, las poblaciones vulnerables, como los niños, mujeres gestantes y las personas mayores, son especialmente susceptibles a los efectos de la anemia debido a necesidades fisiológicas particulares o disminución de la capacidad de absorción de nutrientes esenciales.</p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+    with col1:
+        st.image("https://elcomercio.pe/resizer/xTR28Ck_-oiLTyn23B7uMPCtrHM=/1200x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/ZQWV7YV4N5GFPGQDX2PS7DNYXI.jpg", use_container_width=True)
+
+    # Concepto 3: Anemia infantil
+    col1, col2 = st.columns([3, 2])  # Relación 3:2 para que el texto esté a la izquierda y la imagen a la derecha
+
+    with col1:
+        st.markdown(
+            """
+            <style>
+            .infantil-container {
+                background-color: rgba(0, 0, 0, 0.7);  /* Fondo semi-transparente */
+                padding: 30px;
+                border-radius: 15px;
+                color: white;
+                margin-bottom: 30px;
+                height: auto;
+            }
+            .infantil-container h3 {
+                text-align: center;
+                font-size: 1.8em;
+            }
+            .infantil-container p {
+                text-align: justify;
+                font-size: 1.2em;
+            }
+            </style>
+            <div class="infantil-container">
+                <h3>Anemia Infantil</h3>
+                <p>La <strong>anemia infantil</strong> es una condición particularmente preocupante debido a los efectos graves que puede tener en el desarrollo físico y mental de los niños. Durante los primeros años de vida, el crecimiento rápido y el desarrollo cerebral demandan una cantidad adecuada de oxígeno, y la anemia compromete este suministro crítico.</p>
+                <p>Los niños con anemia severa pueden sufrir retrasos en el crecimiento, dificultades en el aprendizaje, y una baja capacidad de respuesta inmunológica, haciéndolos más vulnerables a infecciones. Además, la anemia infantil puede presentar síntomas menos evidentes como irritabilidad, falta de concentración y apatía, que muchas veces pasan inadvertidos pero afectan significativamente la calidad de vida y aprovechamiento escolar del niño.</p>
+                <p>La causa principal de anemia infantil es la <strong>deficiencia de hierro</strong>, pero también hay que considerar que factores socioeconómicos juegan un rol crítico, ya que los niños en hogares con limitados recursos tienen mayor riesgo de sufrir esta condición debido a una dieta inadecuada y acceso limitado a servicios de salud.</p>
+                <p>En este informe, se presentará información detallada sobre la prevalencia de la anemia infantil en diferentes regiones del mundo, los esfuerzos gubernamentales y comunitarios realizados para abordar este problema, así como algunos estudios que nos proporcionen un panorama más completo de este problema.</p>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+    with col2:
+        st.markdown("<br><br><br><br>", unsafe_allow_html=True)
+        st.image("imagenes/anemia.jpg", use_container_width=True)
+
+
+    st.subheader("¿Cómo se ha vivido la anemia alrededor del mundo?")
+
+    st.write("La anemia infantil es un problema que afecta a millones de niños en todo el mundo, con impactos duraderos en su salud, "
+             "desarrollo y calidad de vida. Sin embargo, diferentes gobiernos han emprendido iniciativas específicas para abordar "
+             "este desafío, implementando políticas públicas, programas de suplementación y campañas educativas contra esta condición. "
+             "En esta sección, exploraremos un conjunto de noticias que destacan las acciones gubernamentales más relevantes y "
+             "algunos momentos históricos clave en la lucha contra la anemia infantil, permitiéndonos reflexionar sobre los "
+             "esfuerzos globales realizados y los aprendizajes obtenidos en diversos contextos.")
+
+    # Configuración del contenido en Markdown para los slides
+    content_markdown = """
+    # Noticias de la anemia en el mundo
+    ---
+    ## Perú
+    ![](https://resources.sbcnoticias.com/sbcnoticias/2020/11/shutterstock_1780081652-696x350.jpg)
+    --
+    
+    <!-- .slide: data-background-color="#283747" -->
+    **"Tan Fuertes como el Hierro": Iniciativa ha ayudado en la recuperación de niños diagnosticados con anemia**
+    
+    <u>20 de mayo de 2022</u>
+    
+    La campaña “Tan Fuertes como el Hierro” ya está cosechando resultados impresionantes. Más de 1,000 familias han sido educadas en alimentación nutritiva y más de 1,200 frascos de suplemento nutricional de hierro han sido entregados gratuitamente para el tratamiento de la anemia infantil. Además, las proyecciones apuntan a la recuperación de, por lo menos, el 70% de los niños diagnosticados con anemia después del tratamiento y la implementación de las estrategias educativas.
+    https://rpp.pe/campanas/valor-compartido/tan-fuertes-como-el-hierro-iniciativa-ha-ayudado-en-la-recuperacion-de-ninos-diagnosticados-con-anemia-noticia-1504586?ref=rpp
+    --
+    
+    <!-- .slide: data-background-color="#283747" -->
+    **Minsa proyecta mejores resultados en lucha contra la anemia para el 2022**
+    
+    <u>20 de mayo de 2022</u>
+    
+    Pese al contexto de la pandemia por la COVID-19, los resultados alcanzados durante el 2021 en la reducción de la prevalencia de anemia de 40.1 % a 38.8 % en menores de 6 a 35 meses a nivel nacional (Encuesta Endes 2021), el Ministerio de Salud (Minsa) viene proyectando, para fines del 2022, mejores resultados en la lucha contra la anemia, debido a la reactivación de acciones multisectoriales para reforzar la estrategia de prevención y control de la enfermedad en el país.
+    https://www.gob.pe/institucion/minsa/noticias/608484-minsa-proyecta-mejores-resultados-en-lucha-contra-la-anemia-para-el-2022
+
+    ---
+    ## Argentina
+    <div style="text-align: center;">
+        <img src="https://i.pinimg.com/736x/2b/1b/96/2b1b961dffad584769549a42eb0fc943.jpg" width="500" height="600">
+    </div>
+    --
+    
+    <!-- .slide: data-background-color="#283747" -->
+    **El presidente presentó el programa Fierritas para prevenir la anemia infantil mediante un complemento producido en laboratorio público**
+    
+    <u>07 de septiembre de 2022</u>
+    
+    Fierritas es un complemento nutricional de hierro, zinc y vitamina A para niñas y niños entre los 6 y 24 meses de vida con falta de adherencia al tratamiento con Sulfato Ferroso. Se presenta en sobres individuales de 1 gramo y contiene micronutrientes en polvo que se pueden mezclar fácilmente con los alimentos de los lactantes cuando comienzan con la alimentación sólida.
+    Para esta primera etapa, el ministerio de Salud definió la producción de sobres de Fierritas por una inversión de casi $250.000.000 que serán distribuidos dentro de la canasta de los 1.000 días del Remediar, comenzando en las regiones de mayor prevalencia de anemia: NOA y NEA.
+    https://www.argentina.gob.ar/noticias/el-presidente-presento-el-programa-fierritas-para-prevenir-la-anemia-infantil-mediante-un
+    ---
+    ## Colombia
+    ![](https://i0.wp.com/viajerosporcolombia.com/wp-content/uploads/Cartagena-de-Indias.jpg?w=1200&ssl=1)
+    --
+    
+    <!-- .slide: data-background-color="#283747" -->
+    **Minsalud cuenta con estrategia para prevenir anemia en primera infancia**
+    
+    <u>04 de noviembre de 2020</u>
+    
+    La Estrategia Nacional para la prevención y control de las deficiencias de Micronutrientes en Colombia 2014-2021, que tiene como principal objetivo "Prevenir y reducir las deficiencias de micronutrientes en la población colombiana, con énfasis en niños y niñas hasta 12 años, gestantes y mujeres en edad fértil", propone 5 líneas de acción:
+    1.   Diversificación de la alimentación
+    2.   Fortalecimiento de acciones prioritarias
+    3.   Fortificación
+    4.   Biofortificación o fortificación biológica de los alimentos
+    5.   Suplementación con Micronutrientes
+    
+https://www.minsalud.gov.co/Paginas/Minsalud-cuenta-con-estrategia-para-prevenir-anemia-en-primera-infancia-.aspx
+    ---
+    ## Guatemala
+    ![](https://i.pinimg.com/736x/6c/45/cb/6c45cba616d0aca213f9d91db522bfed.jpg)
+    --
+    
+    <!-- .slide: data-background-color="#283747" -->
+    **Campamentos Nutrimóviles: exitoso proyecto impulsado en Guatemala para erradicar la desnutrición infantil**
+    
+    <u>21 de marzo de 2024</u>
+    
+    La iniciativa de Guatemaltecos por la Nutrición pasó por instalar lo que sus promotores han bautizado como “Campamentos Nutrimóviles”, que son unas clínicas equipadas con la última tecnología para facilitar atención médica y nutricional a las comunidades guatemaltecas.
+    Según datos de la organización, el 79 % de los niños vencieron la desnutrición aguda después de implantar este proyecto en algunas zonas del país en su fase inicial. Ahora, la organización ha anunciado un segundo campamento que beneficiará a más de 19.000 residentes de San Pedro Soloma y Santa Eulalia, en Huehuetanango.
+    https://www.vozdeamerica.com/a/campamentos-nutrimoviles-exitoso-proyecto-guatemala-erradicar-desnutricion-infantil/7536588.html
+
+    ---
+    ## México
+    ![](https://www.landuum.com/wp-content/uploads/2023/09/pexels-luis-ariza-13808918landuum-scaled.jpg)
+    --
+    
+    <!-- .slide: data-background-color="#283747" -->
+    **IMSS desarrolla campañas para prevenir anemia entre menores**
+    
+    <u>18 de mayo de 2012</u>
+    
+    El IMSS desarrolla diversas campañas para prevenir la anemia entre los grupos más vulnerables, a través de suplementos de hierro y de pláticas sobre nutrición en las Unidades de Medicina Familiar (UMF).
+    La anemia crónica en menores puede generar consecuencias severas para su desarrollo físico, intelectual y emocional, advirtió Miguel Ángel Andrade Padilla, médico pediatra y profesor del Centro de Investigación Educativa y Formación Docente de la Delegación Norte del Distrito Federal del IMSS.
+    https://www.sinembargo.mx/238279/imss-desarrolla-campanas-para-prevenir-anemia-entre-menores/
+
+    ---
+    ## Bolivia
+    ![](https://as1.ftcdn.net/jpg/01/40/10/50/1000_F_140105071_ia43Nfs23jz1O2eezuDdFYRvfL6dudpS.jpg)
+    --
+    
+    <!-- .slide: data-background-color="#283747" -->
+    **La anemia en niños disminuyó en 7,6 puntos porcentuales**
+    
+    <u>07 de abril de 2018</u>
+    
+    En el Día Mundial de la Salud, El Instituto Nacional de Estadística (INE), informó que la anemia en niños de 6 a 59 meses disminuyo en 7,6 puntos porcentuales, de acuerdo a la Encuesta de Demografía y Salud (EDSA) 2016, el porcentaje de anemia es de 53,7% mientras que para la ENDSA 2008 fue de 61,3%.
+    Según el nivel de hemoglobina, los tipos de anemia se miden en leve 26,0 %, moderada 25,6% y severa 2,1%. Según la EDSA 2016, se registra una disminución de 7,6 puntos porcentuales en la anemia moderada y 1,1 puntos en la severa, así como un incremento de 1,1 puntos porcentuales en la anemia leve, en relación a la ENDSA 2008.
+    https://www.ine.gob.bo/index.php/la-anemia-en-ninos-disminuyo-en-76-puntos-porcentuales/
+
+
+
+    """
+
+    # Creación del layout con columnas
+    col1, col2, col3 = st.columns([1, 2, 1])  # Relación: 1:2:1 para centrar
+
+    with col2:  # Contenido en la columna central
+        response_dict = rs.slides(content_markdown, height=700, markdown_props={"data-separator-vertical":"^--$"}, config={"height": 1200})
 
 elif menu == "Fuentes de datos":
     st.title("Fuentes de Datos")
-    # Queda pendiente
+
+    # Submenú Horizontal
+    sub_menu = option_menu(
+        menu_title="",  # Sin título en el menú horizontal
+        options=["Fuente 1", "Fuente 2", "Fuente 3", "Fuente 4"],
+        icons=["link-45deg", "link-45deg", "link-45deg", "link-45deg"],
+        menu_icon="cast",
+        default_index=0,
+        orientation="horizontal",
+    )
+
+    if sub_menu == "Fuente 1":
+        st.subheader("World Bank")
+        st.markdown("""
+        La plataforma World Bank (Banco Mundial) es una fuente global y confiable de datos socioeconómicos y de desarrollo. Proporciona una amplia variedad de indicadores que permiten comprender los desafíos y avances en áreas cruciales como salud, educación, economía y medio ambiente.
+        En el estudio de la anemia infantil, el World Bank ofrece información valiosa para evaluar la magnitud de esta condición y los factores asociados en distintos países y regiones. Estos datos están disponibles a través de su API de Datos Abiertos, una herramienta eficaz para acceder automáticamente a indicadores recopilados por gobiernos, organizaciones de salud y estudios científicos a nivel global.
+        Esta es una breve descripción de la plataforma World Bank (Banco Mundial) y cómo se ha usado para la extracción de información sobre la anemia infantil mediante su API:
+        
+        **Características de la API del World Bank**
+        1. Acceso a Indicadores de Salud: La API ofrece información detallada sobre indicadores específicos relacionados con la anemia infantil, como:
+            - Prevalencia de anemia en niños menores de 5 años (%).
+            - Desglose por país, ingresos, zona geográfica, etc.
+            - Relación con otros determinantes sociales y económicos.
+
+        2.	Datos Históricos y Comparativos: Es posible acceder a datos históricos, lo que permite analizar tendencias a lo largo del tiempo y realizar comparaciones entre distintos países o regiones.
+        3.	Formato Estándar: La API entrega la información en formatos como JSON y XML, facilitando la integración con herramientas de análisis y visualización como Python, R, o plataformas de business intelligence.
+        4.	Actualizaciones Frecuentes: Los datos se actualizan periódicamente, garantizando información actualizada y relevante para estudios e investigaciones sobre salud pública.
+
+        API utilizada: http://api.worldbank.org/v2/country/ALL/indicator/SH.ANM.CHLD.ZS
+        
+        ![](https://gustavo-godoy.com/wp-content/uploads/Banco-mundial-1536x864.jpeg)
+
+        
+        
+        """)
+
+    elif sub_menu == "Fuente 2":
+        st.subheader("Global Health Observatory (GHO)")
+        st.markdown("""
+        El Global Health Observatory (GHO) es una plataforma de la Organización Mundial de la Salud (OMS) dedicada a recopilar, analizar y difundir datos sobre temas de salud a nivel mundial. Proporciona acceso a una extensiva colección de indicadores, reportes y análisis que permiten tener una visión holística de las condiciones de salud a nivel global, regional y nacional.
+        Para el análisis de la anemia infantil, el GHO ofrece datos detallados y actualizados que ayudan a comprender la prevalencia de esta afección y sus implicaciones en la salud pública. Esta información es crucial para investigadores, formuladores de políticas y profesionales de la salud que buscan implementar intervenciones eficaces y monitorear avances hacia metas globales como los Objetivos de Desarrollo Sostenible (ODS).
+        
+        **Características del Global Health Observatory**
+        1.	Amplia Cobertura de Indicadores de Salud: El GHO ofrece indicadores específicos relacionados con la anemia infantil, como:
+            - Prevalencia de anemia en niños menores de 5 años (%).
+            - Desglose por país, ingresos, zona geográfica, etc.
+        2.	Acceso a Datos en Tiempo Real: A través de su API y su portal de datos, el GHO permite acceder a información actualizada, lo que facilita el seguimiento de tendencias emergentes en la salud infantil.
+        3.	Formatos de Datos Flexibles: Los datos del GHO se pueden descargar en formatos como CSV, JSON y XML, facilitando su integración con herramientas de análisis de datos como Python, R y Excel.
+        4.	Datos Comparativos y Desglosados: Permite realizar comparaciones entre países, regiones y grupos demográficos, ayudando a identificar brechas en la atención de la salud y desigualdades en la prevalencia de anemia.
+
+        API utilizada: https://ghoapi.azureedge.net/api/NUTRITION_ANAEMIA_CHILDREN_NUM
+        
+        ![](https://static.euronews.com/articles/stories/06/44/64/20/1920x1080_cmsv2_62a1dfd1-f77f-5f69-83e7-f6bc7f6d2cb9-6446420.jpg)
+
+                """)
+
+    elif sub_menu == "Fuente 3":
+        st.subheader("Demographic and Health Surveys (DHS)")
+        st.markdown("""
+            La plataforma Demographic and Health Surveys (DHS) es una iniciativa respaldada por la Agencia de los Estados Unidos para el Desarrollo Internacional (USAID) y gestionada por ICF International. Desde 1984, se especializa en recopilar datos detallados y precisos sobre salud, población y nutrición en más de 90 países en desarrollo.
+            En investigaciones relacionadas con la anemia infantil, los datos de DHS son invaluables gracias a sus encuestas exhaustivas y su rigor metodológico. Estas encuestas proporcionan información desglosada por edad, sexo y factores socioeconómicos, lo que permite identificar patrones de prevalencia y los determinantes de esta condición. La información de DHS es ampliamente utilizada por científicos, responsables de políticas y organismos de salud para diseñar e implementar estrategias de intervención efectivas.
+
+            **Datos detallados y desglosados:**
+            - DHS ofrece datos sobre la prevalencia de anemia en niños, medidos a través de pruebas de hemoglobina realizadas durante las encuestas.
+            - Los datos están desglosados por edad, sexo, país, y número de encuestas realizadas como el nivel educativo de los padres y el acceso a servicios de salud.
+            
+            **Acceso a microdatos:**
+            - DHS permite descargar microdatos (datos a nivel individual) para realizar análisis personalizados.
+            - La API permite extraer datos en formatos como JSON y CSV para su análisis con lenguajes como Python o R.
+            
+            **Cobertura geográfica amplia:**
+            - Los datos de DHS abarcan más de 90 países, especialmente en regiones de África, Asia, América Latina y el Caribe, permitiendo comparaciones internacionales y análisis regionales.
+            
+            **Actualizaciones periódicas:**
+            - Las encuestas se realizan aproximadamente cada 5 años en los países participantes, lo que facilita el seguimiento de tendencias a lo largo del tiempo.
+            
+            
+            APIs utilizadas: 
+            - https://api.dhsprogram.com/rest/dhs/data/CN_ANMC_C_ANY
+            - https://api.dhsprogram.com/rest/dhs/data/CN_ANMC_C_MLD
+            - https://api.dhsprogram.com/rest/dhs/data/CN_ANMC_C_MOD
+            - https://api.dhsprogram.com/rest/dhs/data/CN_ANMC_C_SEV
+
+            ![](https://data.humdata.org/image/2022-01-08-033748.794232Screen-Shot-2022-01-08-at-10.37.03.png)
+        """)
+    elif sub_menu == "Fuente 4":
+        st.subheader("Kaggle")
+        st.markdown("""
+            Kaggle es una plataforma en línea perteneciente a Google que se destaca por su enfoque en el análisis de datos, aprendizaje automático (machine learning) y competencias de ciencia de datos. Es reconocida por su activa comunidad de científicos de datos y su extenso repositorio de datasets de alta calidad y fácil acceso.
+            En el análisis de la anemia infantil, Kaggle facilita la adquisición de datasets compartidos tanto por instituciones oficiales como por la comunidad de usuarios. Gracias a su API, los usuarios pueden descargar estos datasets directamente a sus entornos de trabajo, como Python o Jupyter Notebooks, agilizando el proceso de extracción y análisis de datos. Además, la plataforma ofrece notebooks y scripts de referencia que ayudan a desarrollar modelos predictivos y visualizaciones informativas.
+
+            **Características clave de Kaggle:**
+            1. Acceso a datasets diversos:
+                - Datasets sobre salud infantil, anemia, nutrición y otros factores relevantes.
+                - Datos aportados por investigadores, organizaciones de salud y proyectos académicos.
+
+            2. API de Kaggle:
+                - Facilita la descarga automatizada de datasets mediante comandos simples.
+                - Integración sencilla con entornos de ciencia de datos como Python y bibliotecas como pandas y scikit-learn.
+
+            3. Comunidad y recursos:
+                - Acceso a notebooks, scripts y discusiones de otros usuarios para inspiración y colaboración en proyectos relacionados con la anemia infantil.
+
+            Data utilizada: 
+            https://www.kaggle.com/datasets/adeolaadesina/factors-affecting-children-anemia-level
+
+            ![](https://opendatascience.com/wp-content/uploads/2018/12/kaggle-640x300.png)
+        """)
 
 elif menu == "Visualización de datos":
     st.title("Visualización de Datos")
@@ -75,11 +420,11 @@ elif menu == "Visualización de datos":
     )
 
     if viz_menu == "Situación Global":
-        st.write("Queda pendiente. Tener cuidado con la identacion")
+        st.write("Queda pendiente")
 
 
     elif viz_menu == "Análisis geográfico":
-        st.write("Queda pendiente. Tener cuidado con la identacion")
+        st.write("Queda pendiente")
 
     elif viz_menu == "Proyecciones":
             st.markdown("""
@@ -782,11 +1127,138 @@ elif menu == "Visualización de datos":
 
 elif menu == "Conclusiones":
     st.title("Conclusiones")
-    # Queda pendiente
+    st.markdown(
+        """
+        Tras realizar un análisis exhaustivo de los datos relacionados con la anemia infantil, hemos obtenido varios hallazgos significativos que arrojan luz sobre este problema de salud pública desde diferentes perspectivas.
+
+        **1. Resultados Generales y Tendencias Históricas:**
+        - Observamos una tendencia decreciente en la prevalencia global de anemia infantil a lo largo de las últimas dos décadas, aunque esta disminución ha sido suave.
+        - Se identificaron ciertas regiones donde las tasas de anemia han disminuido de manera más pronunciada, mientras que en otras, el cambio ha sido mínimo o inexistente.
+
+        **2. Análisis Geográficos:**
+        - A nivel mundial, África y el sur de Asia presentan las tasas más altas de anemia infantil, reflejando disparidades significativas en comparación con regiones como América del Norte y Europa.
+        - Las diferencias intrarregionales también son notables, donde ciertos países en vías de desarrollo muestran tasas alarmantes debido a factores socioeconómicos y disponibilidad de recursos.
+
+        **3. Análisis Predictivo:**
+        - Las proyecciones hacia el año 2030 indican una leve mejora en la reducción de los casos de anemia infantil globalmente, sin embargo, el ritmo proyectado de mejora no es suficiente para erradicar la condición por completo en varios países vulnerables.
+        - Factores emergentes, como cambios climáticos y económicos, podrían impactar nuestras proyecciones actuales y merecen atención para futuras evaluaciones.
+
+        **4. Factores Relacionados con la Anemia Infantil:**
+        - Aunque la muestra de análisis es aproximadamente homogénea al tratarse del país de Nigeria, los datos han mostrado diferencias lo suficientemente significativas como para definir factores relacionados con la anemia.
+        - El nivel de riqueza mostró una correlación con los niveles de anemia, destacando que los niños en los sectores más pobres son los más afectados.
+        - El consumo de suplementos de hierro se correlaciona con una disminución en los niveles de anemia, lo cual destaca la importancia de programas nutricionales y suplementarios.
+        - Los análisis residenciales indicaron que los casos de anemia existentes, corresponden a niños que residen en áreas rurales por sobre los que viven en zonas urbanas, reflejando desigualdades en el acceso a recursos como la educación y servicios de salud.
+
+        """
+    )
 
 elif menu == "Equipo":
     st.title("El equipo detrás del proyecto")
-    # Queda pendiente
+    # Datos del equipo
+    equipo = [
+        {"nombre": "Segio Santillan Tsejem", "Código": "20191314", "github": "https://github.com/SergioSantillan"},
+        {"nombre": "Brisa Cielo Paredes Ballenas", "Código": "20221411", "github": "https://github.com/BrisaParedes"},
+        {"nombre": "Marcell Enrique Rojas Molina", "Código": "20230411", "github": "https://github.com/marcellRojas91"},
+        {"nombre": "Nagiely Sandoval Hurtado", "Código": "20220780", "github": "https://github.com/Brigiely"},
+        {"nombre": "Leonardo Joaquín Frías Gómez ", "Código": "20230394", "github": "https://github.com/leonardo3010f"},
+        {"nombre": "Andrea Vanesa Mamani Taipe", "Código": "20211819", "github": "https://github.com/Andrea-Mamani"},
+        {"nombre": "Marcial Homero Reyes Robles", "Código": "20240731", "github": "https://github.com/Marcial03reyes"},
+        {"nombre": "Giannella Teresa Galvez-Durand Bravo ", "Código": "20210945",
+         "github": "https://github.com/GiaBravo"},
+        {"nombre": "Catherine Antonia Ramirez Gutierrez", "Código": "20220742",
+         "github": "https://github.com/CatherineandHachi"},
+        {"nombre": "Justin Wess Sam Vasquez Vega", "Código": "20230416", "github": "https://github.com/JustinWessSam"},
+        {"nombre": "José Ignacio Gamarra Rivas", "Código": "20180319", "github": "https://github.com/eljose1998"},
+        {"nombre": "Jorge Abel Sencara Maldonado", "Código": "20231508", "github": "https://github.com/Jorge-Abel"},
+        {"nombre": "Omar Zenon Sanchez Perez", "Código": "20211938", "github": "https://github.com/OmarSanchez-UNALM"},
+        {"nombre": "Leonardo Jesús Ccorahua Madera", "Código": "20240701", "github": "https://github.com/leojkuz"},
+        {"nombre": "Daniel Mauricio Quiroz Acho", "Código": "20220776", "github": "https://github.com/daniel-quiroz-a"}
+    ]
+
+    # Personalizar los nombres de los grupos
+    group_titles = ["Módulo de Extracción de datos", "Módulo de Análisis de Datos", "Módulo de Visualización",
+                    "Módulo de Documentación", "Integradores de código"]
+
+    # Añadir CSS para mejorar el estilo de los subtítulos y miembros del equipo
+    st.markdown(
+        """
+        <style>
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .group-title {
+            background-color: rgba(0, 0, 0, 0.8);  /* Fondo semi-transparente */
+            color: white;
+            border-radius: 15px;
+            padding: 15px;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        .team-column {
+            width: 48%;  /* Aproximadamente la mitad del ancho con espacio */
+        }
+        .team-member {
+            background-color: rgba(0, 0, 0, 0.8);  /* Fondo semi-transparente */
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+            text-align: center;  /* Centrar el texto */
+        }
+        .team-member h3 {
+            margin: 0;
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+            font-size: 1.2em;
+        }
+        .team-member p {
+            margin: 0;
+            font-size: 1em;
+        }
+        </style>
+        """, unsafe_allow_html=True
+    )
+
+
+    # Función para mostrar cada miembro del equipo
+    def mostrar_miembro(nombre, codigo, github):
+        return f"""
+            <div class="team-member">
+                <h3>{nombre}</h3>
+                <p>Código: {codigo}</p>
+                <p>GitHub: <a href="{github}" target="_blank">{github}</a></p>
+            </div>
+            """
+
+
+    # Organizar miembros en cinco grupos específicos
+    team_groups = [
+        equipo[0:3],  # Primer grupo con 3 integrantes
+        equipo[3:6],  # Segundo grupo con 3 integrantes
+        equipo[6:9],  # Tercer grupo con 3 integrantes
+        equipo[9:12],  # Cuarto grupo con 3 integrantes
+        equipo[12:15]  # Quinto grupo con 3 integrantes
+    ]
+
+    st.markdown('<div class="team-container">', unsafe_allow_html=True)
+    for i, group in enumerate(team_groups):
+        st.markdown(f'<div class="group-title">{group_titles[i]}</div>', unsafe_allow_html=True)
+        col1, col2 = st.columns(2)
+        with col1:
+            for miembro in group[:2]:  # Primeros 2 miembros en la primera columna
+                st.markdown(mostrar_miembro(miembro["nombre"], miembro["Código"], miembro["github"]),
+                            unsafe_allow_html=True)
+        with col2:
+            for miembro in group[2:]:  # Últimos miembros en la segunda columna (puede ser 1 o 2 miembros)
+                st.markdown(mostrar_miembro(miembro["nombre"], miembro["Código"], miembro["github"]),
+                            unsafe_allow_html=True)
+    st.markdown('</div>', unsafe_allow_html=True)
 
 
 
