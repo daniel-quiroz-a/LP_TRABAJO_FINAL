@@ -500,7 +500,7 @@ elif menu == "Visualización de datos":
                 template="simple_white"
             )
 
-            # Mostrar el gráfico en Streamlit (si lo necesitas)
+            # Mostrar el gráfico en Streamlit
             st.plotly_chart(fig)
 
         with col2:
@@ -540,9 +540,9 @@ elif menu == "Visualización de datos":
                         y=level_data['prevalencia (%)'],
                         mode="lines+markers",
                         line=dict(color=colors.get(level, "gray"), width=2),  # Usar colores predefinidos si existen
-                        marker=dict(size=6),  # Tamaño de los marcadores
+                        marker=dict(size=6),  # Tamaño de los marcadore
                         name=level,  # Nombre del nivel de ingresos
-                        hovertemplate="<b>%{name}</b><br>Año: %{x}<br>Prevalencia: %{y:.2f}%<extra></extra>",
+                        hovertemplate="<b>" + level + "</b><br>Año: %{x}<br>Prevalencia: %{y:.2f}%<extra></extra>",
                     )
                 )
 
@@ -719,7 +719,7 @@ elif menu == "Visualización de datos":
                 st.plotly_chart(fig)
 
 
-            # Crear checkbox para seleccionar países
+            # Crear selector para seleccionar países
             selected_countries = st.multiselect('Selecciona los países', countries, placeholder="Elija un país")
 
             # Actualizar y mostrar gráfico dinámicamente según selección de países
@@ -820,10 +820,10 @@ elif menu == "Visualización de datos":
 
                 fig.add_trace(
                     go.Scatter(
-                        x=[x], y=[y],  # Coordenadas ficticias para hover centralizado
+                        x=[x], y=[y],  
                         mode="markers",
                         marker=dict(size=1, opacity=0),
-                        hoverinfo="text",  # Muestra solo texto definido en hovertext
+                        hoverinfo="text",  
                         hovertext=f"<b>{estado}</b><br>Prevalencia: {value}%"
                     )
                 )
@@ -832,8 +832,8 @@ elif menu == "Visualización de datos":
                 # Configuración del diseño
                 fig.update_layout(
                     height=300,  # Altura del gráfico
-                    margin=dict(t=70, b=10, l=70, r=70),  # Márgenes compactos
-                    font=dict(color="black", family="Arial"),  # Estilo tipográfico (limpio)
+                    margin=dict(t=70, b=10, l=70, r=70),  # Márgenes 
+                    font=dict(color="black", family="Arial"), 
                     xaxis={'showgrid': False, 'showticklabels': False, 'range': [-1, 1]},
                     yaxis={'showgrid': False, 'showticklabels': False, 'range': [0, 1]},
 
@@ -846,7 +846,7 @@ elif menu == "Visualización de datos":
                 return fig
 
 
-            # Sidebar interactivo para seleccionar el país
+            
             st.subheader("Reportes de la gravedad de anemia infantil")
             pais_seleccionado = st.selectbox("Selecciona un país:", data_ind_anemia["Pais"].unique())
 
@@ -874,7 +874,7 @@ elif menu == "Visualización de datos":
                             </div>
                                 """, unsafe_allow_html=True)
 
-                # Tabla bonita con Streamlit
+                # Tabla con gravedad
                 st.subheader("Reportes de gravedad por año")
                 st.dataframe(data_paises.style.format({
                     "Año": "{:.0f}",
@@ -1004,6 +1004,7 @@ elif menu == "Visualización de datos":
         # Mapa 2: Países
         # Se mostrará como HTML debido a que Streamlit-folium no tiene compatibilidad con MarkerCluster
         # Además no es necesario la interacción dinámica con el usuario por lo que el HTML es suficiente
+        # Además se ha usado una versión modificada del csv original con los centros de países corregidos
         tog = tog.st_toggle_switch(label="Mostrar datos totales",
                              key="Key1",
                              default_value=False,
@@ -1170,8 +1171,8 @@ elif menu == "Visualización de datos":
                         size=12,  # Ajustar tamaño de la fuente
                         color="black"  # Establecer el color de la fuente como negro
                     ),
-                    bordercolor="gray",  # (opcional) Borde alrededor de la leyenda para resaltarla
-                    borderwidth=1  # Ancho del borde de la leyenda (opcional)
+                    bordercolor="gray", 
+                    borderwidth=1  
                 )
             )
             # Mostrar el gráfico en Streamlit
@@ -1624,7 +1625,6 @@ elif menu == "Visualización de datos":
         Para profundizar en este análisis, se presenta un gráfico de barras horizontales que compara las distribuciones absolutas de los diferentes niveles de anemia según el tipo de residencia: urbana y rural. Este enfoque nos permite observar, por ejemplo, cuántos niños identificados con anemia severa pertenecen a cada contexto residencial, para así poder comparar ambos escenarios.        
                                 """)
 
-        # Contar las observaciones por combinación de 'Anemia_Level' y 'Residence_Type', especificando 'observed=False'
         # Contar las observaciones por combinación de 'Anemia_Level' y 'Residence_Type', especificando 'observed=False'
         data_count_res = data.groupby(['Anemia_Level', 'Residence_Type'], observed=False).size().reset_index(
             name='count')
