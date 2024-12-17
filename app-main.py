@@ -1767,9 +1767,9 @@ elif menu == "Equipo":
         {"nombre": "Jorge Abel Sencara Maldonado", "Código": "20231508", "github": "https://github.com/Jorge-Abel"},
         {"nombre": "Omar Zenon Sanchez Perez", "Código": "20211938", "github": "https://github.com/OmarSanchez-UNALM"},
         {"nombre": "Leonardo Jesús Ccorahua Madera", "Código": "20240701", "github": "https://github.com/leojkuz"},
-        {"nombre": "Daniel Mauricio Quiroz Acho", "Código": "20220776", "github": "https://github.com/daniel-quiroz-a"}
+        {"nombre": "Daniel Mauricio Quiroz Acho", "Código": "20220776", "github": "https://github.com/Chociox"}
     ]
-
+#p
     # Personalizar los nombres de los grupos
     group_titles = ["Módulo de Extracción de datos", "Módulo de Análisis de Datos", "Módulo de Visualización",
                     "Módulo de Documentación", "Integradores de código"]
